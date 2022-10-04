@@ -1,1 +1,1 @@
-require('./components/Example');
+require('./Pages/Example');
