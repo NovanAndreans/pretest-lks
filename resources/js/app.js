@@ -1,1 +1,1 @@
-require('./Pages/Example');
+require('./Pages/Users/index');

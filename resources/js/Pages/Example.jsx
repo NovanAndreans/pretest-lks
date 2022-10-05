@@ -19,5 +19,5 @@ function Example() {
 
 function Title() { return 'Judul' };
 
-ReactDOM.render(<Example />, document.getElementById('example'));
+ReactDOM.render(<Example />, document.getElementById('content'));
 ReactDOM.render(<Title />, document.getElementById('title'));
