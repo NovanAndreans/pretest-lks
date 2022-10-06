@@ -67,9 +67,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        //
+        return User::findOrFail($id);
     }
 
     /**
@@ -80,7 +80,6 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
     }
 
     /**
@@ -90,9 +89,13 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update($id, Request $request, User $modelUser)
     {
-        //
+        $row = $modelUser->findOrFail($id);
+        $update = collect($request->only($modelUser->getFillable()));
+        $row->update($update->toArray());
+
+        return response()->json(['message' => 'Success Create']);
     }
 
     /**

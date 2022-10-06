@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 import axios from 'axios';
 import Swal from 'sweetalert2'
+import ReactDOM from 'react-dom';
 import DataTable from "../../components/DataTable";
 import Layout from '../../Layouts/Layout';
 
@@ -22,7 +23,7 @@ export default class DatatableUser extends Component {
                                 <h3 className="card-title">DataTable with default features</h3>
                                 <Link
                                     className="btn btn-outline-primary"
-                                    to="user/create">Add User
+                                    to="users/create">Add User
                                 </Link>
                             </div>
                         </div>
@@ -35,3 +36,6 @@ export default class DatatableUser extends Component {
         );
     }
 }
+
+function Title() { return 'Master Users' };
+ReactDOM.render(<Title />, document.getElementById('title'));

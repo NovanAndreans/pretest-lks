@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -65,6 +65,7 @@ export default function EditUser() {
                 })
                 setIsSaving(false)
             });
+        navigate('/users')
     }
 
     return (
@@ -74,7 +75,7 @@ export default function EditUser() {
                     <div className="card">
                         <div className="card-header">
                             <div className="d-flex justify-content-between">
-                                <h4 className="card-title">Add User</h4>
+                                <h4 className="card-title">Edit User</h4>
                             </div>
                         </div>
                         <div className="card-body">
@@ -137,7 +138,7 @@ export default function EditUser() {
                                             </Form.Group>
                                         </Col>
                                     </Row>
-                                    <Button variant="success" className="mt-2" size="lg" block="block" type="submit">
+                                    <Button disabled={isSaving} variant="success" className="mt-2" size="lg" block="block" type="submit">
                                         Save
                                     </Button>
                                 </Form>
@@ -150,5 +151,5 @@ export default function EditUser() {
     )
 }
 
-function Title() { return 'Add User' };
+function Title() { return 'Edit User' };
 ReactDOM.render(<Title />, document.getElementById('title'));
