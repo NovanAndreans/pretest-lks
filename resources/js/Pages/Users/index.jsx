@@ -1,9 +1,10 @@
 import React, { useEffect, useState, Component } from 'react';
-import ReactDOM from 'react-dom';
+import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 import axios from 'axios';
 import Swal from 'sweetalert2'
 import DataTable from "../../components/DataTable";
+import Layout from '../../Layouts/Layout';
 
 export default class DatatableUser extends Component {
     constructor(props) {
@@ -13,21 +14,24 @@ export default class DatatableUser extends Component {
     render() {
         const columns = ['nickname', 'email', 'commonname'];
         return (
-            <div className="container">
-                <div className="card">
-                    <div className="card-header">
-                        <h3 className="card-title">DataTable with default features</h3>
-                    </div>
-                    <div className="card-body">
-                        <DataTable url="http://localhost:8000/api/users" columns={columns} />
+            <Layout>
+                <div className="container">
+                    <div className="card">
+                        <div className="card-header">
+                            <div className="d-flex justify-content-between">
+                                <h3 className="card-title">DataTable with default features</h3>
+                                <Link
+                                    className="btn btn-outline-primary"
+                                    to="user/create">Add User
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="card-body">
+                            <DataTable url="http://localhost:8000/api/users" columns={columns} apiLink="users" />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Layout>
         );
     }
 }
-
-function Title() { return 'Users' };
-
-ReactDOM.render(<DatatableUser />, document.getElementById('content'));
-ReactDOM.render(<Title />, document.getElementById('title'));

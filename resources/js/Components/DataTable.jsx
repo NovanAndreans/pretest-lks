@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
+import { Link, withRouter } from "react-router-dom";
+import Layout from '../Layouts/Layout';
+import Swal from 'sweetalert2'
 
 export default class DataTable extends Component {
+
     constructor(props) {
         super(props);
 
@@ -22,7 +27,42 @@ export default class DataTable extends Component {
             sorted_column: this.props.columns[0],
             offset: 4,
             order: 'asc',
+            link: this.props.apiLink,
         };
+    }
+
+    handleDelete(data) {
+        Swal.fire({
+            title: 'Are you sure want to delete ',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios.delete(`/api/${this.state.link}/${data.id}`)
+                    .then(function (response) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Project deleted successfully!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    })
+                    .catch(function (error) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: error,
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    });
+
+                this.fetchEntities()
+            }
+        })
     }
 
     fetchEntities() {
@@ -82,12 +122,31 @@ export default class DataTable extends Component {
         });
     }
 
-    userList() {
+    List() {
         if (this.state.entities.data.length > 0) {
-            return this.state.entities.data.map(user => {
-                return <tr key={user.id}>
-                    {Object.keys(user).map(key => <td key={key}>{user[key]}</td>)}
-                </tr>
+            return this.state.entities.data.map(data => {
+                return <tr key={data.id}>
+                    {Object.keys(data).map(key => {
+                        if (data[key] == data.id) {
+                            return null;
+                        } else {
+                            return <td key={key}>{data[key]}</td>
+                        }
+
+                    })}
+                    <td>
+                        <div className="d-flex justify-content-around"><Button
+                            className="btn-sm btn-warning">
+                            <Link
+                                to={`${this.state.link}/edit`}><i class="fas fa-edit"></i>
+                            </Link></Button>
+                            <Button className="btn-sm btn-danger" onClick={
+                                () => this.handleDelete(data)
+
+                            }><i class="fas fa-trash"></i></Button>
+                        </div>
+                    </td >
+                </tr >
             })
         } else {
             return <tr>
@@ -114,15 +173,15 @@ export default class DataTable extends Component {
 
     render() {
         return (
-            <div className="data-table">
+            <Layout><div className="data-table">
                 <table className="table table-bordered">
                     <thead>
                         <tr>{this.tableHeads()}</tr>
                     </thead>
-                    <tbody>{this.userList()}</tbody>
+                    <tbody>{this.List()}</tbody>
                 </table>
                 {(this.state.entities.data && this.state.entities.data.length > 0) &&
-                    <div class="d-flex justify-content-between">
+                    <div className="d-flex justify-content-between">
                         <div>
                             <ul className="pagination">
                                 <li className="page-item">
@@ -151,7 +210,7 @@ export default class DataTable extends Component {
                     </div>
 
                 }
-            </div>
+            </div></Layout>
         );
     }
 }

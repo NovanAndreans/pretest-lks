@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -51,9 +52,13 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req, User $modelUser)
     {
-        //
+        $insert = collect($req->only($modelUser->getFillable()))->filter();
+        var_dump($insert);
+        $modelUser->create($insert->toArray());
+
+        return response()->json(['message' => 'Success Create']);
     }
 
     /**
@@ -96,8 +101,15 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id, User $modelUser)
     {
-        //
+        DB::beginTransaction();
+        try {
+            $modelUser->findOrFail($id)->delete();
+            DB::commit();
+            return response()->json(['message' => 'Success Delete']);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+        }
     }
 }
