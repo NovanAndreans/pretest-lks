@@ -25,7 +25,7 @@ export default function Content() {
                 </div>
             </div>
             <section className="content">
-                <div classNameName="container-fluid">
+                <div className="container-fluid">
                     <Routes>
                         <Route exact path="/" element={<Dashboard />} />
                         <Route exact path="users" element={<UserIndex />} />

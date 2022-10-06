@@ -7,7 +7,7 @@ import Footer from './Layouts/Footer';
 
 function Index() {
     return (
-        <div class="wrapper">
+        <div className="wrapper">
             <Navbar />
             <Sidebar />
             <Content />
