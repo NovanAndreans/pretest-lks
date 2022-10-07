@@ -38,7 +38,7 @@ export default function EditCategory() {
     const handleSave = () => {
         setIsSaving(true);
         axios.patch(`/api/categorys/${id}`, {
-            name: name,
+            categoryname: name,
             position: position
         })
             .then(function (response) {

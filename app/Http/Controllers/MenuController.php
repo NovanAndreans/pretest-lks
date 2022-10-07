@@ -3,35 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
-use App\Models\Category;
-use App\Http\Resources\CategoryResource;
+use App\Http\Resources\MenuResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class CategoryController extends Controller
+class MenuController extends Controller
 {
     /**
-     * @var Category
+     * @var Menu
      */
-    protected $category;
+    protected $menu;
 
     /**
      * UsersController constructor.
      *
-     * @param User $user
+     * @param Menu $menu
      */
-    public function __construct(Category $category)
+    public function __construct(Menu $menu)
     {
-        $this->category = $category;
+        $this->menu = $menu;
     }
-
-    public function all()
-    {
-        $query = $this->category->all();
-
-        return $query;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -39,10 +30,10 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $this->category->orderBy($request->column, $request->order);
+        $query = $this->menu->join('categorys', 'menus.idCategory', '=', 'categorys.idCategory')->orderBy($request->column, $request->order);
         $users = $query->paginate($request->per_page ?? 5);
 
-        return CategoryResource::collection($users);
+        return MenuResource::collection($users);
     }
 
     /**
@@ -63,8 +54,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $insert = collect($request->only($this->category->getFillable()))->filter();
-        $this->category->create($insert->toArray());
+        $insert = collect($request->only($this->menu->getFillable()))->filter();
+        $this->menu->create($insert->toArray());
 
         return response()->json(['message' => 'Success Create']);
     }
@@ -72,21 +63,21 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return $this->category->findOrFail($id);
+        return $this->menu->join('categorys', 'menus.idCategory', '=', 'categorys.idCategory')->findOrFail($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Menu $menu)
     {
         //
     }
@@ -95,13 +86,13 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
     public function update($id, Request $request)
     {
-        $row = $this->category->findOrFail($id);
-        $update = collect($request->only($this->category->getFillable()));
+        $row = $this->menu->findOrFail($id);
+        $update = collect($request->only($this->menu->getFillable()));
         $row->update($update->toArray());
 
         return response()->json(['message' => 'Success Create']);
@@ -110,15 +101,14 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id, Menu $menu)
+    public function destroy($id)
     {
         DB::beginTransaction();
         try {
-            $menu->where('idCategory', $id)->delete();
-            $this->category->findOrFail($id)->delete();
+            $this->menu->findOrFail($id)->delete();
             DB::commit();
             return response()->json(['message' => 'Success Delete']);
         } catch (\Throwable $th) {

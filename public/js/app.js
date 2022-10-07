@@ -5352,7 +5352,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _Pages_Users_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Pages/Users/index */ "./resources/js/Pages/Users/index.jsx");
 /* harmony import */ var _Pages_Users_create__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Pages/Users/create */ "./resources/js/Pages/Users/create.jsx");
 /* harmony import */ var _Pages_Users_edit__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Pages/Users/edit */ "./resources/js/Pages/Users/edit.jsx");
@@ -5363,7 +5363,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pages_Tags_index__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Pages/Tags/index */ "./resources/js/Pages/Tags/index.jsx");
 /* harmony import */ var _Pages_Tags_create__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Pages/Tags/create */ "./resources/js/Pages/Tags/create.jsx");
 /* harmony import */ var _Pages_Tags_edit__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Pages/Tags/edit */ "./resources/js/Pages/Tags/edit.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Pages_Menus_index__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../Pages/Menus/index */ "./resources/js/Pages/Menus/index.jsx");
+/* harmony import */ var _Pages_Menus_create__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../Pages/Menus/create */ "./resources/js/Pages/Menus/create.jsx");
+/* harmony import */ var _Pages_Menus_edit__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../Pages/Menus/edit */ "./resources/js/Pages/Menus/edit.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -5380,32 +5383,35 @@ react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link;
 
 
 
+
+
+
 function Content() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
     className: "content-wrapper",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
       className: "content-header",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
         className: "container-fluid",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
           className: "row mb-2",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
             className: "col-sm-6",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("h1", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("h1", {
               className: "m-0",
               children: "Dashboard"
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
             className: "col-sm-6",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("ol", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("ol", {
               className: "breadcrumb float-sm-right",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("li", {
                 className: "breadcrumb-item",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("a", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("a", {
                   href: "#",
                   children: "Home"
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("li", {
                 className: "breadcrumb-item active",
                 children: "Dashboard v1"
               })]
@@ -5413,42 +5419,51 @@ function Content() {
           })]
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("section", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("section", {
       className: "content",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
         className: "container-fluid",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Routes, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Routes, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             exact: true,
             path: "/",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Dashboard__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Dashboard__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "users",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Users_index__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Users_index__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "users/create",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Users_create__WEBPACK_IMPORTED_MODULE_4__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Users_create__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "users/edit/:id",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Users_edit__WEBPACK_IMPORTED_MODULE_5__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Users_edit__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "categorys",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Categorys_index__WEBPACK_IMPORTED_MODULE_7__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Categorys_index__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "categorys/create",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Categorys_create__WEBPACK_IMPORTED_MODULE_8__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Categorys_create__WEBPACK_IMPORTED_MODULE_8__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "categorys/edit/:id",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Categorys_edit__WEBPACK_IMPORTED_MODULE_9__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Categorys_edit__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "tags",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Tags_index__WEBPACK_IMPORTED_MODULE_10__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Tags_index__WEBPACK_IMPORTED_MODULE_10__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "tags/create",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Tags_create__WEBPACK_IMPORTED_MODULE_11__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Tags_create__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
             path: "tags/edit/:id",
-            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Pages_Tags_edit__WEBPACK_IMPORTED_MODULE_12__["default"], {})
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Tags_edit__WEBPACK_IMPORTED_MODULE_12__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            path: "menus",
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Menus_index__WEBPACK_IMPORTED_MODULE_13__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            path: "menus/create",
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Menus_create__WEBPACK_IMPORTED_MODULE_14__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+            path: "menus/edit/:id",
+            element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_Pages_Menus_edit__WEBPACK_IMPORTED_MODULE_15__["default"], {})
           })]
         })
       })
@@ -5701,6 +5716,17 @@ function Sidebar() {
                     children: "Tag"
                   })]
                 })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+                className: "nav-item",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+                  className: "nav-link js-scroll-trigger",
+                  to: '/menus',
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                    className: "far fa-circle nav-icon"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                    children: "Menu"
+                  })]
+                })
               })]
             })]
           })]
@@ -5793,7 +5819,7 @@ function CreateCategory() {
             case 0:
               e.preventDefault();
               formData = new FormData();
-              formData.append('name', name);
+              formData.append('categoryname', name);
               formData.append('position', position);
               _context.next = 6;
               return axios__WEBPACK_IMPORTED_MODULE_2___default().post("http://localhost:8000/api/categorys", formData).then(function (_ref2) {
@@ -6013,7 +6039,7 @@ function EditCategory() {
   var handleSave = function handleSave() {
     setIsSaving(true);
     axios__WEBPACK_IMPORTED_MODULE_2___default().patch("/api/categorys/".concat(id), {
-      name: name,
+      categoryname: name,
       position: position
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
@@ -6415,6 +6441,702 @@ var Dashboard = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Menus/create.jsx":
+/*!*********************************************!*\
+  !*** ./resources/js/Pages/Menus/create.jsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CreateMenu)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Form */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap/Row */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap/Col */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function CreateMenu() {
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate)();
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      allcategory = _useState2[0],
+      setAllCategory = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      category = _useState4[0],
+      setCategory = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      name = _useState6[0],
+      setName = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState8 = _slicedToArray(_useState7, 2),
+      description = _useState8[0],
+      setDescription = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState10 = _slicedToArray(_useState9, 2),
+      price = _useState10[0],
+      setPrice = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+      _useState12 = _slicedToArray(_useState11, 2),
+      validationError = _useState12[0],
+      setValidationError = _useState12[1];
+
+  var createUser = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
+      var formData;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              e.preventDefault();
+              formData = new FormData();
+              formData.append('idCategory', category);
+              formData.append('menuname', name);
+              formData.append('description', description);
+              formData.append('price', price.replace(',', '.'));
+              _context.next = 8;
+              return axios__WEBPACK_IMPORTED_MODULE_2___default().post("http://localhost:8000/api/menus", formData).then(function (_ref2) {
+                var data = _ref2.data;
+                sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+                  icon: "success",
+                  text: data.message
+                });
+                navigate("/menus");
+              })["catch"](function (_ref3) {
+                var response = _ref3.response;
+
+                if (response.status === 422) {
+                  setValidationError(response.data.errors);
+                } else {
+                  sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+                    text: response.data.message,
+                    icon: "error"
+                  });
+                }
+              });
+
+            case 8:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function createUser(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/categorys/all").then(function (response) {
+      setAllCategory(response.data);
+    })["catch"](function (error) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        icon: 'error',
+        title: 'An Error Occured!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    });
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    className: "container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      className: "row justify-content-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "col-12 col-sm-12 col-md-12",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "card",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "card-header",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "d-flex justify-content-between",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h4", {
+                className: "card-title",
+                children: "Add Menu"
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "card-body",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-wrapper",
+              children: [Object.keys(validationError).length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                className: "row",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                  className: "col-12",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    className: "alert alert-danger",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ul", {
+                      className: "mb-0",
+                      children: Object.entries(validationError).map(function (_ref4) {
+                        var _ref5 = _slicedToArray(_ref4, 2),
+                            key = _ref5[0],
+                            value = _ref5[1];
+
+                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+                          children: value
+                        }, key);
+                      })
+                    })
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                onSubmit: createUser,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "name",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Category"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("select", {
+                        value: category,
+                        onChange: function onChange(event) {
+                          setCategory(event.target.value);
+                        },
+                        className: "form-control",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                          value: "",
+                          children: "Choose Category"
+                        }), // allcategory.forEach(element => {
+                        //     return <option value={element.idCategory}>{element.categoryname}</option>
+                        // })
+                        Object.entries(allcategory).map(function (_ref6) {
+                          var _ref7 = _slicedToArray(_ref6, 2),
+                              key = _ref7[0],
+                              value = _ref7[1];
+
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                            value: value.idCategory,
+                            children: value.categoryname
+                          }, key);
+                        })]
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "name",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Name"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
+                        type: "text",
+                        value: name,
+                        onChange: function onChange(event) {
+                          setName(event.target.value);
+                        }
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "description",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Description"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("textarea", {
+                        value: description,
+                        onChange: function onChange(event) {
+                          setDescription(event.target.value);
+                        },
+                        className: "form-control",
+                        id: "description",
+                        rows: "3",
+                        name: "description"
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "price",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Price"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_number_format__WEBPACK_IMPORTED_MODULE_4__.NumericFormat, {
+                        className: "form-control",
+                        value: price,
+                        thousandSeparator: true // prefix={'$'}
+                        ,
+                        onChange: function onChange(event) {
+                          setPrice(event.target.value);
+                        }
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__["default"], {
+                  variant: "success",
+                  className: "mt-2",
+                  size: "lg",
+                  block: "block",
+                  type: "submit",
+                  children: "Save"
+                })]
+              })]
+            })
+          })]
+        })
+      })
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Menus/edit.jsx":
+/*!*******************************************!*\
+  !*** ./resources/js/Pages/Menus/edit.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EditMenu)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Form */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap/Row */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap/Col */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function EditMenu() {
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate)();
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      allcategory = _useState2[0],
+      setAllCategory = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)().id),
+      _useState4 = _slicedToArray(_useState3, 2),
+      id = _useState4[0],
+      setId = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      category = _useState6[0],
+      setCategory = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Choose Category"),
+      _useState8 = _slicedToArray(_useState7, 2),
+      categoryname = _useState8[0],
+      setCategoryName = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState10 = _slicedToArray(_useState9, 2),
+      name = _useState10[0],
+      setName = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState12 = _slicedToArray(_useState11, 2),
+      description = _useState12[0],
+      setDescription = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState14 = _slicedToArray(_useState13, 2),
+      price = _useState14[0],
+      setPrice = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+      _useState16 = _slicedToArray(_useState15, 2),
+      validationError = _useState16[0],
+      setValidationError = _useState16[1];
+
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState18 = _slicedToArray(_useState17, 2),
+      isSaving = _useState18[0],
+      setIsSaving = _useState18[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/menus/".concat(id)).then(function (response) {
+      var user = response.data;
+      setCategory(user.category);
+      setCategoryName(user.categoryname);
+      setName(user.menuname);
+      setDescription(user.description);
+      setPrice(user.price);
+    })["catch"](function (error) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        icon: 'error',
+        title: 'An Error Occured!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    });
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/categorys/all").then(function (response) {
+      setAllCategory(response.data);
+    })["catch"](function (error) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        icon: 'error',
+        title: 'An Error Occured!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    });
+  }, []);
+
+  var handleSave = function handleSave() {
+    setIsSaving(true);
+    axios__WEBPACK_IMPORTED_MODULE_2___default().patch("/api/menus/".concat(id), {
+      idCategory: category,
+      menuname: name,
+      description: description,
+      price: price
+    }).then(function (response) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        icon: 'success',
+        title: 'Project updated successfully!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      setIsSaving(false);
+    })["catch"](function (error) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        icon: 'error',
+        title: 'An Error Occured!',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      setIsSaving(false);
+    });
+    navigate('/menus');
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    className: "container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      className: "row justify-content-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "col-12 col-sm-12 col-md-12",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "card",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "card-header",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "d-flex justify-content-between",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h4", {
+                className: "card-title",
+                children: "Edit Menu"
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "card-body",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "form-wrapper",
+              children: [Object.keys(validationError).length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                className: "row",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                  className: "col-12",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    className: "alert alert-danger",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ul", {
+                      className: "mb-0",
+                      children: Object.entries(validationError).map(function (_ref) {
+                        var _ref2 = _slicedToArray(_ref, 2),
+                            key = _ref2[0],
+                            value = _ref2[1];
+
+                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+                          children: value
+                        }, key);
+                      })
+                    })
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                onSubmit: handleSave,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "name",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Category"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("select", {
+                        value: category,
+                        onChange: function onChange(event) {
+                          setCategory(event.target.value);
+                        },
+                        className: "form-control",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                          value: "",
+                          children: categoryname
+                        }), // allcategory.forEach(element => {
+                        //     return <option value={element.idCategory}>{element.categoryname}</option>
+                        // })
+                        Object.entries(allcategory).map(function (_ref3) {
+                          var _ref4 = _slicedToArray(_ref3, 2),
+                              key = _ref4[0],
+                              value = _ref4[1];
+
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
+                            value: value.idCategory,
+                            children: value.categoryname
+                          }, key);
+                        })]
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "name",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Name"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
+                        type: "text",
+                        value: name,
+                        onChange: function onChange(event) {
+                          setName(event.target.value);
+                        }
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "description",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Description"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("textarea", {
+                        value: description,
+                        onChange: function onChange(event) {
+                          setDescription(event.target.value);
+                        },
+                        className: "form-control",
+                        id: "description",
+                        rows: "3",
+                        name: "description"
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Group, {
+                      controlId: "price",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
+                        children: "Price"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_number_format__WEBPACK_IMPORTED_MODULE_4__.NumericFormat, {
+                        className: "form-control",
+                        value: price,
+                        thousandSeparator: true // prefix={'$'}
+                        ,
+                        onChange: function onChange(event) {
+                          setPrice(event.target.value);
+                        }
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_10__["default"], {
+                  disabled: isSaving,
+                  variant: "success",
+                  className: "mt-2",
+                  size: "lg",
+                  block: "block",
+                  type: "submit",
+                  children: "Save"
+                })]
+              })]
+            })
+          })]
+        })
+      })
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Menus/index.jsx":
+/*!********************************************!*\
+  !*** ./resources/js/Pages/Menus/index.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ DatatableMenu)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _components_DataTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/DataTable */ "./resources/js/components/DataTable.jsx");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+
+
+
+
+
+var DatatableMenu = /*#__PURE__*/function (_Component) {
+  _inherits(DatatableMenu, _Component);
+
+  var _super = _createSuper(DatatableMenu);
+
+  function DatatableMenu(props) {
+    _classCallCheck(this, DatatableMenu);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(DatatableMenu, [{
+    key: "render",
+    value: function render() {
+      var columns = ['categoryname', 'menuname', 'price'];
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: "container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: "card",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+              className: "card-header",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                className: "d-flex justify-content-between",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+                  className: "card-title",
+                  children: "DataTable with default features"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+                  className: "btn btn-outline-primary",
+                  to: "/menus/create",
+                  children: "Add Menu"
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+              className: "card-body",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_DataTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                url: "http://localhost:8000/api/menus",
+                columns: columns,
+                apiLink: "menus"
+              })
+            })]
+          })
+        })
+      });
+    }
+  }]);
+
+  return DatatableMenu;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Tags/create.jsx":
 /*!********************************************!*\
   !*** ./resources/js/Pages/Tags/create.jsx ***!
@@ -6491,7 +7213,7 @@ function CreateCategory() {
             case 0:
               e.preventDefault();
               formData = new FormData();
-              formData.append('name', name);
+              formData.append('tagname', name);
               _context.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_2___default().post("http://localhost:8000/api/tags", formData).then(function (_ref2) {
                 var data = _ref2.data;
@@ -6689,7 +7411,7 @@ function EditCategory() {
   var handleSave = function handleSave() {
     setIsSaving(true);
     axios__WEBPACK_IMPORTED_MODULE_2___default().patch("/api/tags/".concat(id), {
-      name: name
+      tagname: name
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'success',
@@ -36841,6 +37563,1205 @@ exports.typeOf = typeOf;
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/react-number-format/dist/react-number-format.es.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/react-number-format/dist/react-number-format.es.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NumberFormatBase": () => (/* binding */ NumberFormatBase),
+/* harmony export */   "NumericFormat": () => (/* binding */ NumericFormat),
+/* harmony export */   "PatternFormat": () => (/* binding */ PatternFormat),
+/* harmony export */   "getNumericCaretBoundary": () => (/* binding */ getCaretBoundary),
+/* harmony export */   "getPatternCaretBoundary": () => (/* binding */ getCaretBoundary$1),
+/* harmony export */   "numericFormatter": () => (/* binding */ format),
+/* harmony export */   "patterFormatter": () => (/* binding */ format$1),
+/* harmony export */   "removeNumericFormat": () => (/* binding */ removeFormatting),
+/* harmony export */   "removePatternFormat": () => (/* binding */ removeFormatting$1),
+/* harmony export */   "useNumericFormat": () => (/* binding */ useNumericFormat),
+/* harmony export */   "usePatternFormat": () => (/* binding */ usePatternFormat)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/**
+ * react-number-format - 5.0.1
+ * Author : Sudhanshu Yadav
+ * Copyright (c) 2016, 2022 to Sudhanshu Yadav, released under the MIT license.
+ * https://github.com/s-yadav/react-number-format
+ */
+
+
+
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) { if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        { t[p] = s[p]; } }
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        { for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                { t[p[i]] = s[p[i]]; }
+        } }
+    return t;
+}
+
+var SourceType;
+(function (SourceType) {
+    SourceType["event"] = "event";
+    SourceType["props"] = "prop";
+})(SourceType || (SourceType = {}));
+
+// basic noop function
+function noop() { }
+function charIsNumber(char) {
+    return !!(char || '').match(/\d/);
+}
+function isNil(val) {
+    return val === null || val === undefined;
+}
+function isNanValue(val) {
+    return typeof val === 'number' && isNaN(val);
+}
+function escapeRegExp(str) {
+    return str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
+}
+function getThousandsGroupRegex(thousandsGroupStyle) {
+    switch (thousandsGroupStyle) {
+        case 'lakh':
+            return /(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/g;
+        case 'wan':
+            return /(\d)(?=(\d{4})+(?!\d))/g;
+        case 'thousand':
+        default:
+            return /(\d)(?=(\d{3})+(?!\d))/g;
+    }
+}
+function applyThousandSeparator(str, thousandSeparator, thousandsGroupStyle) {
+    var thousandsGroupRegex = getThousandsGroupRegex(thousandsGroupStyle);
+    var index = str.search(/[1-9]/);
+    index = index === -1 ? str.length : index;
+    return (str.substring(0, index) +
+        str.substring(index, str.length).replace(thousandsGroupRegex, '$1' + thousandSeparator));
+}
+function usePersistentCallback(cb) {
+    var callbackRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(cb);
+    // keep the callback ref upto date
+    callbackRef.current = cb;
+    /**
+     * initialize a persistent callback which never changes
+     * through out the component lifecycle
+     */
+    var persistentCbRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(function () {
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+
+        return callbackRef.current.apply(callbackRef, args);
+    });
+    return persistentCbRef.current;
+}
+//spilt a float number into different parts beforeDecimal, afterDecimal, and negation
+function splitDecimal(numStr, allowNegative) {
+    if ( allowNegative === void 0 ) allowNegative = true;
+
+    var hasNegation = numStr[0] === '-';
+    var addNegation = hasNegation && allowNegative;
+    numStr = numStr.replace('-', '');
+    var parts = numStr.split('.');
+    var beforeDecimal = parts[0];
+    var afterDecimal = parts[1] || '';
+    return {
+        beforeDecimal: beforeDecimal,
+        afterDecimal: afterDecimal,
+        hasNegation: hasNegation,
+        addNegation: addNegation,
+    };
+}
+function fixLeadingZero(numStr) {
+    if (!numStr)
+        { return numStr; }
+    var isNegative = numStr[0] === '-';
+    if (isNegative)
+        { numStr = numStr.substring(1, numStr.length); }
+    var parts = numStr.split('.');
+    var beforeDecimal = parts[0].replace(/^0+/, '') || '0';
+    var afterDecimal = parts[1] || '';
+    return ("" + (isNegative ? '-' : '') + beforeDecimal + (afterDecimal ? ("." + afterDecimal) : ''));
+}
+/**
+ * limit decimal numbers to given scale
+ * Not used .fixedTo because that will break with big numbers
+ */
+function limitToScale(numStr, scale, fixedDecimalScale) {
+    var str = '';
+    var filler = fixedDecimalScale ? '0' : '';
+    for (var i = 0; i <= scale - 1; i++) {
+        str += numStr[i] || filler;
+    }
+    return str;
+}
+function repeat(str, count) {
+    return Array(count + 1).join(str);
+}
+function toNumericString(num) {
+    var _num = num + ''; // typecast number to string
+    // store the sign and remove it from the number.
+    var sign = _num[0] === '-' ? '-' : '';
+    if (sign)
+        { _num = _num.substring(1); }
+    // split the number into cofficient and exponent
+    var ref = _num.split(/[eE]/g);
+    var coefficient = ref[0];
+    var exponent = ref[1];
+    // covert exponent to number;
+    exponent = Number(exponent);
+    // if there is no exponent part or its 0, return the coffiecient with sign
+    if (!exponent)
+        { return sign + coefficient; }
+    coefficient = coefficient.replace('.', '');
+    /**
+     * for scientific notation the current decimal index will be after first number (index 0)
+     * So effective decimal index will always be 1 + exponent value
+     */
+    var decimalIndex = 1 + exponent;
+    var coffiecientLn = coefficient.length;
+    if (decimalIndex < 0) {
+        // if decimal index is less then 0 add preceding 0s
+        // add 1 as join will have
+        coefficient = '0.' + repeat('0', Math.abs(decimalIndex)) + coefficient;
+    }
+    else if (decimalIndex >= coffiecientLn) {
+        // if decimal index is less then 0 add leading 0s
+        coefficient = coefficient + repeat('0', decimalIndex - coffiecientLn);
+    }
+    else {
+        // else add decimal point at proper index
+        coefficient =
+            (coefficient.substring(0, decimalIndex) || '0') + '.' + coefficient.substring(decimalIndex);
+    }
+    return sign + coefficient;
+}
+/**
+ * This method is required to round prop value to given scale.
+ * Not used .round or .fixedTo because that will break with big numbers
+ */
+function roundToPrecision(numStr, scale, fixedDecimalScale) {
+    //if number is empty don't do anything return empty string
+    if (['', '-'].indexOf(numStr) !== -1)
+        { return numStr; }
+    var shouldHaveDecimalSeparator = (numStr.indexOf('.') !== -1 || fixedDecimalScale) && scale;
+    var ref = splitDecimal(numStr);
+    var beforeDecimal = ref.beforeDecimal;
+    var afterDecimal = ref.afterDecimal;
+    var hasNegation = ref.hasNegation;
+    var floatValue = parseFloat(("0." + (afterDecimal || '0')));
+    var floatValueStr = afterDecimal.length <= scale ? ("0." + afterDecimal) : floatValue.toFixed(scale);
+    var roundedDecimalParts = floatValueStr.split('.');
+    var intPart = beforeDecimal
+        .split('')
+        .reverse()
+        .reduce(function (roundedStr, current, idx) {
+        if (roundedStr.length > idx) {
+            return ((Number(roundedStr[0]) + Number(current)).toString() +
+                roundedStr.substring(1, roundedStr.length));
+        }
+        return current + roundedStr;
+    }, roundedDecimalParts[0]);
+    var decimalPart = limitToScale(roundedDecimalParts[1] || '', scale, fixedDecimalScale);
+    var negation = hasNegation ? '-' : '';
+    var decimalSeparator = shouldHaveDecimalSeparator ? '.' : '';
+    return ("" + negation + intPart + decimalSeparator + decimalPart);
+}
+/** set the caret positon in an input field **/
+function setCaretPosition(el, caretPos) {
+    el.value = el.value;
+    // ^ this is used to not only get 'focus', but
+    // to make sure we don't have it everything -selected-
+    // (it causes an issue in chrome, and having it doesn't hurt any other browser)
+    if (el !== null) {
+        /* @ts-ignore */
+        if (el.createTextRange) {
+            /* @ts-ignore */
+            var range = el.createTextRange();
+            range.move('character', caretPos);
+            range.select();
+            return true;
+        }
+        // (el.selectionStart === 0 added for Firefox bug)
+        if (el.selectionStart || el.selectionStart === 0) {
+            el.focus();
+            el.setSelectionRange(caretPos, caretPos);
+            return true;
+        }
+        // fail city, fortunately this never happens (as far as I've tested) :)
+        el.focus();
+        return false;
+    }
+}
+function findChangeRange(prevValue, newValue) {
+    var i = 0, j = 0;
+    var prevLength = prevValue.length;
+    var newLength = newValue.length;
+    while (prevValue[i] === newValue[i] && i < prevLength)
+        { i++; }
+    //check what has been changed from last
+    while (prevValue[prevLength - 1 - j] === newValue[newLength - 1 - j] &&
+        newLength - j > i &&
+        prevLength - j > i) {
+        j++;
+    }
+    return {
+        from: { start: i, end: prevLength - j },
+        to: { start: i, end: newLength - j },
+    };
+}
+/*
+  Returns a number whose value is limited to the given range
+*/
+function clamp(num, min, max) {
+    return Math.min(Math.max(num, min), max);
+}
+function geInputCaretPosition(el) {
+    /*Max of selectionStart and selectionEnd is taken for the patch of pixel and other mobile device caret bug*/
+    return Math.max(el.selectionStart, el.selectionEnd);
+}
+function addInputMode() {
+    return (typeof navigator !== 'undefined' &&
+        !(navigator.platform && /iPhone|iPod/.test(navigator.platform)));
+}
+function getDefaultChangeMeta(value) {
+    return {
+        from: {
+            start: 0,
+            end: 0,
+        },
+        to: {
+            start: 0,
+            end: value.length,
+        },
+        lastValue: '',
+    };
+}
+function getMaskAtIndex(mask, index) {
+    if ( mask === void 0 ) mask = ' ';
+
+    if (typeof mask === 'string') {
+        return mask;
+    }
+    return mask[index] || ' ';
+}
+function getCaretPosition(newFormattedValue, lastFormattedValue, curValue, curCaretPos, boundary) {
+    /**
+     * if something got inserted on empty value, add the formatted character before the current value,
+     * This is to avoid the case where typed character is present on format characters
+     */
+    var firstAllowedPosition = boundary.findIndex(function (b) { return b; });
+    var prefixFormat = newFormattedValue.slice(0, firstAllowedPosition);
+    if (!lastFormattedValue && !curValue.startsWith(prefixFormat)) {
+        curValue = prefixFormat + curValue;
+        curCaretPos = curCaretPos + prefixFormat.length;
+    }
+    var curValLn = curValue.length;
+    var formattedValueLn = newFormattedValue.length;
+    // create index map
+    var addedIndexMap = {};
+    var indexMap = new Array(curValLn);
+    for (var i = 0; i < curValLn; i++) {
+        indexMap[i] = -1;
+        for (var j = 0, jLn = formattedValueLn; j < jLn; j++) {
+            if (curValue[i] === newFormattedValue[j] && addedIndexMap[j] !== true) {
+                indexMap[i] = j;
+                addedIndexMap[j] = true;
+                break;
+            }
+        }
+    }
+    /**
+     * For current caret position find closest characters (left and right side)
+     * which are properly mapped to formatted value.
+     * The idea is that the new caret position will exist always in the boundary of
+     * that mapped index
+     */
+    var pos = curCaretPos;
+    while (pos < curValLn && (indexMap[pos] === -1 || !charIsNumber(curValue[pos]))) {
+        pos++;
+    }
+    // if the caret position is on last keep the endIndex as last for formatted value
+    var endIndex = pos === curValLn || indexMap[pos] === -1 ? formattedValueLn : indexMap[pos];
+    pos = curCaretPos - 1;
+    while (pos > 0 && indexMap[pos] === -1)
+        { pos--; }
+    var startIndex = pos === -1 || indexMap[pos] === -1 ? 0 : indexMap[pos] + 1;
+    /**
+     * case where a char is added on suffix and removed from middle, example 2sq345 becoming $2,345 sq
+     * there is still a mapping but the order of start index and end index is changed
+     */
+    if (startIndex > endIndex)
+        { return endIndex; }
+    /**
+     * given the current caret position if it closer to startIndex
+     * keep the new caret position on start index or keep it closer to endIndex
+     */
+    return curCaretPos - startIndex < endIndex - curCaretPos ? startIndex : endIndex;
+}
+/* This keeps the caret within typing area so people can't type in between prefix or suffix or format characters */
+function getCaretPosInBoundary(value, caretPos, boundary, direction) {
+    var valLn = value.length;
+    // clamp caret position to [0, value.length]
+    caretPos = clamp(caretPos, 0, valLn);
+    if (direction === 'left') {
+        while (caretPos >= 0 && !boundary[caretPos])
+            { caretPos--; }
+        // if we don't find any suitable caret position on left, set it on first allowed position
+        if (caretPos === -1)
+            { caretPos = boundary.indexOf(true); }
+    }
+    else {
+        while (caretPos <= valLn && !boundary[caretPos])
+            { caretPos++; }
+        // if we don't find any suitable caret position on right, set it on last allowed position
+        if (caretPos > valLn)
+            { caretPos = boundary.lastIndexOf(true); }
+    }
+    // if we still don't find caret position, set it at the end of value
+    if (caretPos === -1)
+        { caretPos = valLn; }
+    return caretPos;
+}
+function caretUnknownFormatBoundary(formattedValue) {
+    var boundaryAry = Array.from({ length: formattedValue.length + 1 }).map(function () { return true; });
+    for (var i = 0, ln = boundaryAry.length; i < ln; i++) {
+        // consider caret to be in boundary if it is before or after numeric value
+        boundaryAry[i] = Boolean(charIsNumber(formattedValue[i]) || charIsNumber(formattedValue[i - 1]));
+    }
+    return boundaryAry;
+}
+function useInternalValues(value, defaultValue, valueIsNumericString, format, removeFormatting, onValueChange) {
+    if ( onValueChange === void 0 ) onValueChange = noop;
+
+    var propValues = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+    var getValues = usePersistentCallback(function (value) {
+        var formattedValue, numAsString;
+        if (isNil(value) || isNanValue(value)) {
+            numAsString = '';
+            formattedValue = '';
+        }
+        else if (typeof value === 'number' || valueIsNumericString) {
+            numAsString = typeof value === 'number' ? toNumericString(value) : value;
+            formattedValue = format(numAsString);
+        }
+        else {
+            numAsString = removeFormatting(value, undefined);
+            formattedValue = value;
+        }
+        return { formattedValue: formattedValue, numAsString: numAsString };
+    });
+    var ref = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(function () {
+        return getValues(defaultValue);
+    });
+    var values = ref[0];
+    var setValues = ref[1];
+    var _onValueChange = function (values, sourceInfo) {
+        setValues({
+            formattedValue: values.formattedValue,
+            numAsString: values.value,
+        });
+        onValueChange(values, sourceInfo);
+    };
+    (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+        //if element is moved to uncontrolled mode, don't reset the value
+        if (!isNil(value)) {
+            propValues.current = getValues(value);
+            setValues(propValues.current);
+        }
+        else {
+            propValues.current = undefined;
+        }
+    }, [value, getValues]);
+    return [values, _onValueChange];
+}
+
+function defaultRemoveFormatting(value) {
+    return value.replace(/[^0-9]/g, '');
+}
+function defaultFormat(value) {
+    return value;
+}
+function NumberFormatBase(props) {
+    var type = props.type; if ( type === void 0 ) type = 'text';
+    var displayType = props.displayType; if ( displayType === void 0 ) displayType = 'input';
+    var customInput = props.customInput;
+    var renderText = props.renderText;
+    var getInputRef = props.getInputRef;
+    var format = props.format; if ( format === void 0 ) format = defaultFormat;
+    var removeFormatting = props.removeFormatting; if ( removeFormatting === void 0 ) removeFormatting = defaultRemoveFormatting;
+    var defaultValue = props.defaultValue;
+    var valueIsNumericString = props.valueIsNumericString;
+    var onValueChange = props.onValueChange;
+    var isAllowed = props.isAllowed;
+    var onChange = props.onChange; if ( onChange === void 0 ) onChange = noop;
+    var onKeyDown = props.onKeyDown; if ( onKeyDown === void 0 ) onKeyDown = noop;
+    var onMouseUp = props.onMouseUp; if ( onMouseUp === void 0 ) onMouseUp = noop;
+    var onFocus = props.onFocus; if ( onFocus === void 0 ) onFocus = noop;
+    var onBlur = props.onBlur; if ( onBlur === void 0 ) onBlur = noop;
+    var propValue = props.value;
+    var getCaretBoundary = props.getCaretBoundary; if ( getCaretBoundary === void 0 ) getCaretBoundary = caretUnknownFormatBoundary;
+    var otherProps = __rest(props, ["type", "displayType", "customInput", "renderText", "getInputRef", "format", "removeFormatting", "defaultValue", "valueIsNumericString", "onValueChange", "isAllowed", "onChange", "onKeyDown", "onMouseUp", "onFocus", "onBlur", "value", "getCaretBoundary"]);
+    var ref = useInternalValues(propValue, defaultValue, Boolean(valueIsNumericString), format, removeFormatting, onValueChange);
+    var ref_0 = ref[0];
+    var formattedValue = ref_0.formattedValue;
+    var numAsString = ref_0.numAsString;
+    var onFormattedValueChange = ref[1];
+    var lastUpdatedValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+    var _onValueChange = function (values, source) {
+        lastUpdatedValue.current = values.formattedValue;
+        onFormattedValueChange(values, source);
+    };
+    // check if there is any change in the value due to props change
+    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+        var newFormattedValue = format(numAsString);
+        // if the formatted value is not synced to parent, or if the formatted value is different
+        if (lastUpdatedValue.current === undefined || newFormattedValue !== lastUpdatedValue.current) {
+            var input = focusedElm.current;
+            updateValue({
+                formattedValue: newFormattedValue,
+                numAsString: numAsString,
+                input: input,
+                setCaretPosition: true,
+                source: SourceType.props,
+                event: undefined,
+            });
+        }
+    });
+    var ref$1 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+    var mounted = ref$1[0];
+    var setMounted = ref$1[1];
+    var focusedElm = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+    var timeout = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({
+        setCaretTimeout: null,
+        focusTimeout: null,
+    });
+    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+        setMounted(true);
+        return function () {
+            clearTimeout(timeout.current.setCaretTimeout);
+            clearTimeout(timeout.current.focusTimeout);
+        };
+    }, []);
+    var _format = format;
+    var getValueObject = function (formattedValue, numAsString) {
+        var floatValue = parseFloat(numAsString);
+        return {
+            formattedValue: formattedValue,
+            value: numAsString,
+            floatValue: isNaN(floatValue) ? undefined : floatValue,
+        };
+    };
+    var setPatchedCaretPosition = function (el, caretPos, currentValue) {
+        /* setting caret position within timeout of 0ms is required for mobile chrome,
+        otherwise browser resets the caret position after we set it
+        We are also setting it without timeout so that in normal browser we don't see the flickering */
+        setCaretPosition(el, caretPos);
+        timeout.current.setCaretTimeout = setTimeout(function () {
+            if (el.value === currentValue)
+                { setCaretPosition(el, caretPos); }
+        }, 0);
+    };
+    /* This keeps the caret within typing area so people can't type in between prefix or suffix */
+    var correctCaretPosition = function (value, caretPos, direction) {
+        return getCaretPosInBoundary(value, caretPos, getCaretBoundary(value), direction);
+    };
+    var getNewCaretPosition = function (inputValue, newFormattedValue, caretPos) {
+        var caretBoundary = getCaretBoundary(newFormattedValue);
+        var updatedCaretPos = getCaretPosition(newFormattedValue, formattedValue, inputValue, caretPos, caretBoundary);
+        //correct caret position if its outside of editable area
+        updatedCaretPos = getCaretPosInBoundary(newFormattedValue, updatedCaretPos, caretBoundary);
+        return updatedCaretPos;
+    };
+    var updateValue = function (params) {
+        var newFormattedValue = params.formattedValue; if ( newFormattedValue === void 0 ) newFormattedValue = '';
+        var input = params.input;
+        var setCaretPosition = params.setCaretPosition; if ( setCaretPosition === void 0 ) setCaretPosition = true;
+        var source = params.source;
+        var event = params.event;
+        var numAsString = params.numAsString;
+        var caretPos = params.caretPos;
+        if (input) {
+            //calculate caret position if not defined
+            if (caretPos === undefined && setCaretPosition) {
+                var inputValue = params.inputValue || input.value;
+                var currentCaretPosition = geInputCaretPosition(input);
+                /**
+                 * set the value imperatively, this is required for IE fix
+                 * This is also required as if new caret position is beyond the previous value.
+                 * Caret position will not be set correctly
+                 */
+                input.value = newFormattedValue;
+                //get the caret position
+                caretPos = getNewCaretPosition(inputValue, newFormattedValue, currentCaretPosition);
+            }
+            /**
+             * set the value imperatively, as we set the caret position as well imperatively.
+             * This is to keep value and caret position in sync
+             */
+            input.value = newFormattedValue;
+            //set caret position, and value imperatively when element is provided
+            if (setCaretPosition && caretPos !== undefined) {
+                //set caret position
+                setPatchedCaretPosition(input, caretPos, newFormattedValue);
+            }
+        }
+        if (newFormattedValue !== formattedValue) {
+            // trigger onValueChange synchronously, so parent is updated along with the number format. Fix for #277, #287
+            _onValueChange(getValueObject(newFormattedValue, numAsString), { event: event, source: source });
+        }
+    };
+    var formatInputValue = function (inputValue, event, source) {
+        var changeRange = findChangeRange(formattedValue, inputValue);
+        var changeMeta = Object.assign(Object.assign({}, changeRange), { lastValue: formattedValue });
+        var _numAsString = removeFormatting(inputValue, changeMeta);
+        var _formattedValue = _format(_numAsString);
+        if (isAllowed && !isAllowed(getValueObject(_formattedValue, _numAsString))) {
+            return false;
+        }
+        updateValue({
+            formattedValue: _formattedValue,
+            numAsString: _numAsString,
+            inputValue: inputValue,
+            event: event,
+            source: source,
+            setCaretPosition: true,
+            input: event.target,
+        });
+        return true;
+    };
+    var _onChange = function (e) {
+        var el = e.target;
+        var inputValue = el.value;
+        var changed = formatInputValue(inputValue, e, SourceType.event);
+        if (changed)
+            { onChange(e); }
+    };
+    var _onKeyDown = function (e) {
+        var el = e.target;
+        var key = e.key;
+        var selectionStart = el.selectionStart;
+        var selectionEnd = el.selectionEnd;
+        var value = el.value; if ( value === void 0 ) value = '';
+        var expectedCaretPosition;
+        //Handle backspace and delete against non numerical/decimal characters or arrow keys
+        if (key === 'ArrowLeft' || key === 'Backspace') {
+            expectedCaretPosition = Math.max(selectionStart - 1, 0);
+        }
+        else if (key === 'ArrowRight') {
+            expectedCaretPosition = Math.min(selectionStart + 1, value.length);
+        }
+        else if (key === 'Delete') {
+            expectedCaretPosition = selectionStart;
+        }
+        //if expectedCaretPosition is not set it means we don't want to Handle keyDown
+        // also if multiple characters are selected don't handle
+        if (expectedCaretPosition === undefined || selectionStart !== selectionEnd) {
+            onKeyDown(e);
+            return;
+        }
+        var newCaretPosition = expectedCaretPosition;
+        if (key === 'ArrowLeft' || key === 'ArrowRight') {
+            var direction = key === 'ArrowLeft' ? 'left' : 'right';
+            newCaretPosition = correctCaretPosition(value, expectedCaretPosition, direction);
+        }
+        else if (key === 'Delete' && !charIsNumber(value[expectedCaretPosition])) {
+            // in case of delete go to closest caret boundary on the right side
+            newCaretPosition = correctCaretPosition(value, expectedCaretPosition, 'right');
+        }
+        else if (key === 'Backspace' && !charIsNumber(value[expectedCaretPosition])) {
+            // in case of backspace go to closest caret boundary on the left side
+            newCaretPosition = correctCaretPosition(value, expectedCaretPosition, 'left');
+        }
+        if (newCaretPosition !== expectedCaretPosition) {
+            setPatchedCaretPosition(el, newCaretPosition, value);
+        }
+        /* NOTE: this is just required for unit test as we need to get the newCaretPosition,
+                Remove this when you find different solution */
+        /* @ts-ignore */
+        if (e.isUnitTestRun) {
+            setPatchedCaretPosition(el, newCaretPosition, value);
+        }
+        onKeyDown(e);
+    };
+    /** required to handle the caret position when click anywhere within the input **/
+    var _onMouseUp = function (e) {
+        var el = e.target;
+        /**
+         * NOTE: we have to give default value for value as in case when custom input is provided
+         * value can come as undefined when nothing is provided on value prop.
+         */
+        var selectionStart = el.selectionStart;
+        var selectionEnd = el.selectionEnd;
+        var value = el.value; if ( value === void 0 ) value = '';
+        if (selectionStart === selectionEnd) {
+            var caretPosition = correctCaretPosition(value, selectionStart);
+            if (caretPosition !== selectionStart) {
+                setPatchedCaretPosition(el, caretPosition, value);
+            }
+        }
+        onMouseUp(e);
+    };
+    var _onFocus = function (e) {
+        // Workaround Chrome and Safari bug https://bugs.chromium.org/p/chromium/issues/detail?id=779328
+        // (onFocus event target selectionStart is always 0 before setTimeout)
+        e.persist();
+        var el = e.target;
+        focusedElm.current = el;
+        timeout.current.focusTimeout = setTimeout(function () {
+            var selectionStart = el.selectionStart;
+            var selectionEnd = el.selectionEnd;
+            var value = el.value; if ( value === void 0 ) value = '';
+            var caretPosition = correctCaretPosition(value, selectionStart);
+            //setPatchedCaretPosition only when everything is not selected on focus (while tabbing into the field)
+            if (caretPosition !== selectionStart &&
+                !(selectionStart === 0 && selectionEnd === value.length)) {
+                setPatchedCaretPosition(el, caretPosition, value);
+            }
+            onFocus(e);
+        }, 0);
+    };
+    var _onBlur = function (e) {
+        focusedElm.current = null;
+        clearTimeout(timeout.current.focusTimeout);
+        clearTimeout(timeout.current.setCaretTimeout);
+        onBlur(e);
+    };
+    // add input mode on element based on format prop and device once the component is mounted
+    var inputMode = mounted && addInputMode() ? 'numeric' : undefined;
+    var inputProps = Object.assign({ inputMode: inputMode }, otherProps, {
+        type: type,
+        value: formattedValue,
+        onChange: _onChange,
+        onKeyDown: _onKeyDown,
+        onMouseUp: _onMouseUp,
+        onFocus: _onFocus,
+        onBlur: _onBlur,
+    });
+    if (displayType === 'text') {
+        return renderText ? (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, renderText(formattedValue, otherProps) || null)) : (react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", Object.assign({}, otherProps, { ref: getInputRef }), formattedValue));
+    }
+    else if (customInput) {
+        var CustomInput = customInput;
+        /* @ts-ignore */
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement(CustomInput, Object.assign({}, inputProps, { ref: getInputRef }));
+    }
+    return react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", Object.assign({}, inputProps, { ref: getInputRef }));
+}
+
+function format(numStr, props) {
+    var decimalScale = props.decimalScale;
+    var fixedDecimalScale = props.fixedDecimalScale;
+    var prefix = props.prefix; if ( prefix === void 0 ) prefix = '';
+    var suffix = props.suffix; if ( suffix === void 0 ) suffix = '';
+    var allowNegative = props.allowNegative; if ( allowNegative === void 0 ) allowNegative = true;
+    var thousandsGroupStyle = props.thousandsGroupStyle; if ( thousandsGroupStyle === void 0 ) thousandsGroupStyle = 'thousand';
+    // don't apply formatting on empty string or '-'
+    if (numStr === '' || numStr === '-') {
+        return numStr;
+    }
+    var ref = getSeparators(props);
+    var thousandSeparator = ref.thousandSeparator;
+    var decimalSeparator = ref.decimalSeparator;
+    /**
+     * Keep the decimal separator
+     * when decimalScale is not defined or non zero and the numStr has decimal in it
+     * Or if decimalScale is > 0 and fixeDecimalScale is true (even if numStr has no decimal)
+     */
+    var hasDecimalSeparator = (decimalScale !== 0 && numStr.indexOf('.') !== -1) || (decimalScale && fixedDecimalScale);
+    var ref$1 = splitDecimal(numStr, allowNegative);
+    var beforeDecimal = ref$1.beforeDecimal;
+    var afterDecimal = ref$1.afterDecimal;
+    var addNegation = ref$1.addNegation; // eslint-disable-line prefer-const
+    //apply decimal precision if its defined
+    if (decimalScale !== undefined) {
+        afterDecimal = limitToScale(afterDecimal, decimalScale, !!fixedDecimalScale);
+    }
+    if (thousandSeparator) {
+        beforeDecimal = applyThousandSeparator(beforeDecimal, thousandSeparator, thousandsGroupStyle);
+    }
+    //add prefix and suffix when there is a number present
+    if (prefix)
+        { beforeDecimal = prefix + beforeDecimal; }
+    if (suffix)
+        { afterDecimal = afterDecimal + suffix; }
+    //restore negation sign
+    if (addNegation)
+        { beforeDecimal = '-' + beforeDecimal; }
+    numStr = beforeDecimal + ((hasDecimalSeparator && decimalSeparator) || '') + afterDecimal;
+    return numStr;
+}
+function getSeparators(props) {
+    var decimalSeparator = props.decimalSeparator; if ( decimalSeparator === void 0 ) decimalSeparator = '.';
+    var thousandSeparator = props.thousandSeparator;
+    var allowedDecimalSeparators = props.allowedDecimalSeparators;
+    if (thousandSeparator === true) {
+        thousandSeparator = ',';
+    }
+    if (!allowedDecimalSeparators) {
+        allowedDecimalSeparators = [decimalSeparator, '.'];
+    }
+    return {
+        decimalSeparator: decimalSeparator,
+        thousandSeparator: thousandSeparator,
+        allowedDecimalSeparators: allowedDecimalSeparators,
+    };
+}
+function handleNegation(value, allowNegative) {
+    if ( value === void 0 ) value = '';
+
+    var negationRegex = new RegExp('(-)');
+    var doubleNegationRegex = new RegExp('(-)(.)*(-)');
+    // Check number has '-' value
+    var hasNegation = negationRegex.test(value);
+    // Check number has 2 or more '-' values
+    var removeNegation = doubleNegationRegex.test(value);
+    //remove negation
+    value = value.replace(/-/g, '');
+    if (hasNegation && !removeNegation && allowNegative) {
+        value = '-' + value;
+    }
+    return value;
+}
+function getNumberRegex(decimalSeparator, global) {
+    return new RegExp(("(^-)|[0-9]|" + (escapeRegExp(decimalSeparator))), global ? 'g' : undefined);
+}
+function removeFormatting(value, changeMeta, props) {
+    if ( changeMeta === void 0 ) changeMeta = getDefaultChangeMeta(value);
+
+    var allowNegative = props.allowNegative; if ( allowNegative === void 0 ) allowNegative = true;
+    var prefix = props.prefix; if ( prefix === void 0 ) prefix = '';
+    var suffix = props.suffix; if ( suffix === void 0 ) suffix = '';
+    var decimalScale = props.decimalScale;
+    var from = changeMeta.from;
+    var to = changeMeta.to;
+    var start = to.start;
+    var end = to.end;
+    var ref = getSeparators(props);
+    var allowedDecimalSeparators = ref.allowedDecimalSeparators;
+    var decimalSeparator = ref.decimalSeparator;
+    var isBeforeDecimalSeparator = value[end] === decimalSeparator;
+    /** Check for any allowed decimal separator is added in the numeric format and replace it with decimal separator */
+    if (end - start === 1 && allowedDecimalSeparators.indexOf(value[start]) !== -1) {
+        var separator = decimalScale === 0 ? '' : decimalSeparator;
+        value = value.substring(0, start) + separator + value.substring(start + 1, value.length);
+    }
+    var hasNegation = false;
+    /**
+     * if prefix starts with - the number hast to have two - at the start
+     * if suffix starts with - and the value length is same as suffix length, then the - sign is from the suffix
+     * In other cases, if the value starts with - then it is a negation
+     */
+    if (prefix.startsWith('-'))
+        { hasNegation = value.startsWith('--'); }
+    else if (suffix.startsWith('-') && value.length === suffix.length)
+        { hasNegation = false; }
+    else if (value[0] === '-')
+        { hasNegation = true; }
+    // remove negation from start to simplify prefix logic as negation comes before prefix
+    if (hasNegation) {
+        value = value.substring(1);
+        // account for the removal of the negation for start and end index
+        start -= 1;
+        end -= 1;
+    }
+    /**
+     * remove prefix
+     * Remove whole prefix part if its present on the value
+     * If the prefix is partially deleted (in which case change start index will be less the prefix length)
+     * Remove only partial part of prefix.
+     */
+    var startIndex = 0;
+    if (value.startsWith(prefix))
+        { startIndex += prefix.length; }
+    else if (start < prefix.length)
+        { startIndex = start; }
+    value = value.substring(startIndex);
+    // account for deleted prefix for end index
+    end -= startIndex;
+    /**
+     * Remove suffix
+     * Remove whole suffix part if its present on the value
+     * If the suffix is partially deleted (in which case change end index will be greater than the suffixStartIndex)
+     * remove the partial part of suffix
+     */
+    var endIndex = value.length;
+    var suffixStartIndex = value.length - suffix.length;
+    if (value.endsWith(suffix))
+        { endIndex = suffixStartIndex; }
+    else if (end > value.length - suffix.length)
+        { endIndex = end; }
+    value = value.substring(0, endIndex);
+    // add the negation back and handle for double negation
+    value = handleNegation(hasNegation ? ("-" + value) : value, allowNegative);
+    // remove non numeric characters
+    value = (value.match(getNumberRegex(decimalSeparator, true)) || []).join('');
+    // replace the decimalSeparator with ., and only keep the first separator, ignore following ones
+    var firstIndex = value.indexOf(decimalSeparator);
+    value = value.replace(new RegExp(escapeRegExp(decimalSeparator), 'g'), function (match, index) {
+        return index === firstIndex ? '.' : '';
+    });
+    //check if beforeDecimal got deleted and there is nothing after decimal,
+    //clear all numbers in such case while keeping the - sign
+    var ref$1 = splitDecimal(value, allowNegative);
+    var beforeDecimal = ref$1.beforeDecimal;
+    var afterDecimal = ref$1.afterDecimal;
+    var addNegation = ref$1.addNegation; // eslint-disable-line prefer-const
+    //clear only if something got deleted before decimal (cursor is before decimal)
+    if (to.end - to.start < from.end - from.start &&
+        beforeDecimal === '' &&
+        isBeforeDecimalSeparator &&
+        !parseFloat(afterDecimal)) {
+        value = addNegation ? '-' : '';
+    }
+    return value;
+}
+function getCaretBoundary(formattedValue, props) {
+    var prefix = props.prefix; if ( prefix === void 0 ) prefix = '';
+    var suffix = props.suffix; if ( suffix === void 0 ) suffix = '';
+    var boundaryAry = Array.from({ length: formattedValue.length + 1 }).map(function () { return true; });
+    var hasNegation = formattedValue[0] === '-';
+    // fill for prefix and negation
+    boundaryAry.fill(false, 0, prefix.length + (hasNegation ? 1 : 0));
+    // fill for suffix
+    var valLn = formattedValue.length;
+    boundaryAry.fill(false, valLn - suffix.length + 1, valLn + 1);
+    return boundaryAry;
+}
+function validateProps(props) {
+    var ref = getSeparators(props);
+    var thousandSeparator = ref.thousandSeparator;
+    var decimalSeparator = ref.decimalSeparator;
+    if (thousandSeparator === decimalSeparator) {
+        throw new Error(("\n        Decimal separator can't be same as thousand separator.\n        thousandSeparator: " + thousandSeparator + " (thousandSeparator = {true} is same as thousandSeparator = \",\")\n        decimalSeparator: " + decimalSeparator + " (default value for decimalSeparator is .)\n     "));
+    }
+}
+function useNumericFormat(props) {
+    var decimalSeparator = props.decimalSeparator;
+    var allowedDecimalSeparators = props.allowedDecimalSeparators;
+    var thousandsGroupStyle = props.thousandsGroupStyle;
+    var suffix = props.suffix;
+    var allowNegative = props.allowNegative;
+    var allowLeadingZeros = props.allowLeadingZeros;
+    var onKeyDown = props.onKeyDown; if ( onKeyDown === void 0 ) onKeyDown = noop;
+    var onBlur = props.onBlur; if ( onBlur === void 0 ) onBlur = noop;
+    var thousandSeparator = props.thousandSeparator;
+    var decimalScale = props.decimalScale;
+    var fixedDecimalScale = props.fixedDecimalScale;
+    var prefix = props.prefix; if ( prefix === void 0 ) prefix = '';
+    var defaultValue = props.defaultValue;
+    var value = props.value;
+    var valueIsNumericString = props.valueIsNumericString;
+    var onValueChange = props.onValueChange;
+    var restProps = __rest(props, ["decimalSeparator", "allowedDecimalSeparators", "thousandsGroupStyle", "suffix", "allowNegative", "allowLeadingZeros", "onKeyDown", "onBlur", "thousandSeparator", "decimalScale", "fixedDecimalScale", "prefix", "defaultValue", "value", "valueIsNumericString", "onValueChange"]);
+    // validate props
+    validateProps(props);
+    var _format = function (numStr) { return format(numStr, props); };
+    var _removeFormatting = function (inputValue, changeMeta) { return removeFormatting(inputValue, changeMeta, props); };
+    var _valueIsNumericString = valueIsNumericString;
+    if (!isNil(value)) {
+        _valueIsNumericString = valueIsNumericString !== null && valueIsNumericString !== void 0 ? valueIsNumericString : typeof value === 'number';
+    }
+    else if (!isNil(defaultValue)) {
+        _valueIsNumericString = valueIsNumericString !== null && valueIsNumericString !== void 0 ? valueIsNumericString : typeof defaultValue === 'number';
+    }
+    var roundIncomingValueToPrecision = function (value) {
+        if (isNil(value) || isNanValue(value))
+            { return value; }
+        if (typeof value === 'number') {
+            value = toNumericString(value);
+        }
+        /**
+         * only round numeric or float string values coming through props,
+         * we don't need to do it for onChange events, as we want to prevent typing there
+         */
+        if (_valueIsNumericString && typeof decimalScale === 'number') {
+            return roundToPrecision(value, decimalScale, Boolean(fixedDecimalScale));
+        }
+        return value;
+    };
+    var ref = useInternalValues(roundIncomingValueToPrecision(value), roundIncomingValueToPrecision(defaultValue), Boolean(_valueIsNumericString), _format, _removeFormatting, onValueChange);
+    var ref_0 = ref[0];
+    var numAsString = ref_0.numAsString;
+    var formattedValue = ref_0.formattedValue;
+    var _onValueChange = ref[1];
+    var _onKeyDown = function (e) {
+        var el = e.target;
+        var key = e.key;
+        var selectionStart = el.selectionStart;
+        var selectionEnd = el.selectionEnd;
+        var value = el.value; if ( value === void 0 ) value = '';
+        // if multiple characters are selected and user hits backspace, no need to handle anything manually
+        if (selectionStart !== selectionEnd) {
+            onKeyDown(e);
+            return;
+        }
+        // if user hits backspace, while the cursor is before prefix, and the input has negation, remove the negation
+        if (key === 'Backspace' && value[0] === '-' && selectionStart === prefix.length + 1) {
+            // bring the cursor to after negation
+            setCaretPosition(el, 1);
+        }
+        // don't allow user to delete decimal separator when decimalScale and fixedDecimalScale is set
+        var ref = getSeparators(props);
+        var decimalSeparator = ref.decimalSeparator;
+        if (key === 'Backspace' &&
+            value[selectionStart - 1] === decimalSeparator &&
+            decimalScale &&
+            fixedDecimalScale) {
+            setCaretPosition(el, selectionStart - 1);
+            e.preventDefault();
+        }
+        var _thousandSeparator = thousandSeparator === true ? ',' : thousandSeparator;
+        // move cursor when delete or backspace is pressed before/after thousand separator
+        if (key === 'Backspace' && value[selectionStart - 1] === _thousandSeparator) {
+            setCaretPosition(el, selectionStart - 1);
+        }
+        if (key === 'Delete' && value[selectionStart] === _thousandSeparator) {
+            setCaretPosition(el, selectionStart + 1);
+        }
+        onKeyDown(e);
+    };
+    var _onBlur = function (e) {
+        var _value = numAsString;
+        // if there no no numeric value, clear the input
+        if (!_value.match(/\d/g)) {
+            _value = '';
+        }
+        // clear leading 0s
+        if (!allowLeadingZeros) {
+            _value = fixLeadingZero(_value);
+        }
+        // apply fixedDecimalScale on blur event
+        if (fixedDecimalScale && decimalScale) {
+            _value = roundToPrecision(_value, decimalScale, fixedDecimalScale);
+        }
+        if (_value !== numAsString) {
+            var formattedValue = format(_value, props);
+            _onValueChange({
+                formattedValue: formattedValue,
+                value: _value,
+                floatValue: parseFloat(_value),
+            }, {
+                event: e,
+                source: SourceType.event,
+            });
+        }
+        onBlur(e);
+    };
+    return Object.assign(Object.assign({}, restProps), { value: formattedValue, valueIsNumericString: false, onValueChange: _onValueChange, format: _format, removeFormatting: _removeFormatting, getCaretBoundary: function (formattedValue) { return getCaretBoundary(formattedValue, props); }, onKeyDown: _onKeyDown, onBlur: _onBlur });
+}
+function NumericFormat(props) {
+    var numericFormatProps = useNumericFormat(props);
+    return react__WEBPACK_IMPORTED_MODULE_0__.createElement(NumberFormatBase, Object.assign({}, numericFormatProps));
+}
+
+function format$1(numStr, props) {
+    var format = props.format;
+    var allowEmptyFormatting = props.allowEmptyFormatting;
+    var mask = props.mask;
+    var patternChar = props.patternChar; if ( patternChar === void 0 ) patternChar = '#';
+    if (numStr === '' && !allowEmptyFormatting)
+        { return ''; }
+    var hashCount = 0;
+    var formattedNumberAry = format.split('');
+    for (var i = 0, ln = format.length; i < ln; i++) {
+        if (format[i] === patternChar) {
+            formattedNumberAry[i] = numStr[hashCount] || getMaskAtIndex(mask, hashCount);
+            hashCount += 1;
+        }
+    }
+    return formattedNumberAry.join('');
+}
+function removeFormatting$1(value, changeMeta, props) {
+    if ( changeMeta === void 0 ) changeMeta = getDefaultChangeMeta(value);
+
+    var format = props.format;
+    var patternChar = props.patternChar; if ( patternChar === void 0 ) patternChar = '#';
+    var from = changeMeta.from;
+    var to = changeMeta.to;
+    var lastValue = changeMeta.lastValue; if ( lastValue === void 0 ) lastValue = '';
+    var isNumericSlot = function (caretPos) { return format[caretPos] === patternChar; };
+    var removeFormatChar = function (string, startIndex) {
+        var str = '';
+        for (var i = 0; i < string.length; i++) {
+            if (isNumericSlot(startIndex + i)) {
+                str += string[i];
+            }
+        }
+        return str;
+    };
+    var extractNumbers = function (str) { return str.replace(/[^0-9]/g, ''); };
+    // if format doesn't have any number, remove all the non numeric characters
+    if (!format.match(/\d/)) {
+        return extractNumbers(value);
+    }
+    /**
+     * if user paste the whole formatted text in an empty input, check if matches to the pattern
+     * and remove the format characters, if there is a mismatch on the pattern, do plane number extract
+     */
+    if (lastValue === '' && value.length === format.length) {
+        var str = '';
+        for (var i = 0; i < value.length; i++) {
+            if (isNumericSlot(i)) {
+                str += value[i];
+            }
+            else if (value[i] !== format[i]) {
+                // if there is a mismatch on the pattern, do plane number extract
+                return extractNumbers(value);
+            }
+        }
+        return str;
+    }
+    /**
+     * For partial change,
+     * where ever there is a change on the input, we can break the number in three parts
+     * 1st: left part which is unchanged
+     * 2nd: middle part which is changed
+     * 3rd: right part which is unchanged
+     *
+     * The first and third section will be same as last value, only the middle part will change
+     * We can consider on the change part all the new characters are non format characters.
+     * And on the first and last section it can have partial format characters.
+     *
+     * We pick first and last section from the lastValue (as that has 1-1 mapping with format)
+     * and middle one from the update value.
+     */
+    var firstSection = lastValue.substring(0, from.start);
+    var middleSection = value.substring(to.start, to.end);
+    var lastSection = lastValue.substring(from.end);
+    return ("" + (removeFormatChar(firstSection, 0)) + (extractNumbers(middleSection)) + (removeFormatChar(lastSection, from.end)));
+}
+function getCaretBoundary$1(formattedValue, props) {
+    var format = props.format;
+    var mask = props.mask;
+    var patternChar = props.patternChar; if ( patternChar === void 0 ) patternChar = '#';
+    var boundaryAry = Array.from({ length: formattedValue.length + 1 }).map(function () { return true; });
+    var hashCount = 0;
+    var firstEmptySlot = -1;
+    var maskAndIndexMap = {};
+    format.split('').forEach(function (char, index) {
+        var maskAtIndex = undefined;
+        if (char === patternChar) {
+            hashCount++;
+            maskAtIndex = getMaskAtIndex(mask, hashCount - 1);
+            if (firstEmptySlot === -1 && formattedValue[index] === maskAtIndex) {
+                firstEmptySlot = index;
+            }
+        }
+        maskAndIndexMap[index] = maskAtIndex;
+    });
+    var isPosAllowed = function (pos) {
+        // the position is allowed if the position is not masked and valid number area
+        return format[pos] === patternChar && formattedValue[pos] !== maskAndIndexMap[pos];
+    };
+    for (var i = 0, ln = boundaryAry.length; i < ln; i++) {
+        // consider caret to be in boundary if it is before or after numeric value
+        // Note: on pattern based format its denoted by patternCharacter
+        // we should also allow user to put cursor on first empty slot
+        boundaryAry[i] = i === firstEmptySlot || isPosAllowed(i) || isPosAllowed(i - 1);
+    }
+    // the first patternChar position is always allowed
+    boundaryAry[format.indexOf(patternChar)] = true;
+    return boundaryAry;
+}
+function validateProps$1(props) {
+    var mask = props.mask;
+    if (mask) {
+        var maskAsStr = mask === 'string' ? mask : mask.toString();
+        if (maskAsStr.match(/\d/g)) {
+            throw new Error(("Mask " + mask + " should not contain numeric character;"));
+        }
+    }
+}
+function usePatternFormat(props) {
+    var mask = props.mask;
+    var allowEmptyFormatting = props.allowEmptyFormatting;
+    var formatProp = props.format;
+    var inputMode = props.inputMode; if ( inputMode === void 0 ) inputMode = 'numeric';
+    var onKeyDown = props.onKeyDown; if ( onKeyDown === void 0 ) onKeyDown = noop;
+    var patternChar = props.patternChar; if ( patternChar === void 0 ) patternChar = '#';
+    var restProps = __rest(props, ["mask", "allowEmptyFormatting", "format", "inputMode", "onKeyDown", "patternChar"]);
+    // validate props
+    validateProps$1(props);
+    var _getCaretBoundary = function (formattedValue) {
+        return getCaretBoundary$1(formattedValue, props);
+    };
+    var _onKeyDown = function (e) {
+        var key = e.key;
+        var el = e.target;
+        var selectionStart = el.selectionStart;
+        var selectionEnd = el.selectionEnd;
+        var value = el.value;
+        // if multiple characters are selected and user hits backspace, no need to handle anything manually
+        if (selectionStart !== selectionEnd) {
+            onKeyDown(e);
+            return;
+        }
+        // bring the cursor to closest numeric section
+        var caretPos = selectionStart;
+        // if backspace is pressed after the format characters, bring it to numeric section
+        // if delete is pressed before the format characters, bring it to numeric section
+        if (key === 'Backspace' || key === 'Delete') {
+            var direction = 'right';
+            if (key === 'Backspace') {
+                while (caretPos > 0 && formatProp[caretPos - 1] !== patternChar) {
+                    caretPos--;
+                }
+                direction = 'left';
+            }
+            else {
+                var formatLn = formatProp.length;
+                while (caretPos < formatLn && formatProp[caretPos] !== patternChar) {
+                    caretPos++;
+                }
+                direction = 'right';
+            }
+            caretPos = getCaretPosInBoundary(value, caretPos, _getCaretBoundary(value), direction);
+        }
+        else if (formatProp[caretPos] !== patternChar &&
+            key !== 'ArrowLeft' &&
+            key !== 'ArrowRight') {
+            // if user is typing on format character position, bring user to next allowed caret position
+            caretPos = getCaretPosInBoundary(value, caretPos + 1, _getCaretBoundary(value), 'right');
+        }
+        // if we changing caret position, set the caret position
+        if (caretPos !== selectionStart) {
+            setCaretPosition(el, caretPos);
+        }
+        onKeyDown(e);
+    };
+    return Object.assign(Object.assign({}, restProps), { inputMode: inputMode, format: function (numStr) { return format$1(numStr, props); }, removeFormatting: function (inputValue, changeMeta) { return removeFormatting$1(inputValue, changeMeta, props); }, getCaretBoundary: _getCaretBoundary, onKeyDown: _onKeyDown });
+}
+function PatternFormat(props) {
+    var patternFormatProps = usePatternFormat(props);
+    return react__WEBPACK_IMPORTED_MODULE_0__.createElement(NumberFormatBase, Object.assign({}, patternFormatProps));
+}
+
+
 
 
 /***/ }),

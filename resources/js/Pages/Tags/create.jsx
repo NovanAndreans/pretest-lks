@@ -19,7 +19,7 @@ export default function CreateCategory() {
 
         const formData = new FormData()
 
-        formData.append('name', name)
+        formData.append('tagname', name)
 
         await axios.post(`http://localhost:8000/api/tags`, formData).then(({ data }) => {
             Swal.fire({

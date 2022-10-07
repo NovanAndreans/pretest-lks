@@ -16,11 +16,11 @@ class CreateMenusTable extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id('idMenu');
             $table->unsignedBigInteger('idCategory');
-            $table->string('name', 150);
-            $table->text('description');
+            $table->string('menuname', 150);
+            $table->text('description')->nullable();
             $table->decimal('price', $precision = 5, $scale = 2);
-            $table->integer('ratingcount');
-            $table->integer('ratingsum');
+            $table->integer('ratingcount')->nullable();
+            $table->integer('ratingsum')->nullable();
 
             $table->foreign('idCategory')->references('idCategory')->on('categorys')->onDelete('cascade');
         });

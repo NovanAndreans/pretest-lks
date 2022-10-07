@@ -5,18 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Menu extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'idCategory';
+    protected $primaryKey = 'idMenu';
 
-    protected $table = "categorys";
+    protected $table = "menus";
 
     public $timestamps = false;
 
     protected $fillable = [
-        'categoryname',
-        'position'
+        'idCategory',
+        'menuname',
+        'description',
+        'price',
+        'ratingcount',
+        'ratingsum',
     ];
 }

@@ -36,7 +36,7 @@ export default function EditCategory() {
     const handleSave = () => {
         setIsSaving(true);
         axios.patch(`/api/tags/${id}`, {
-            name: name
+            tagname: name
         })
             .then(function (response) {
                 Swal.fire({

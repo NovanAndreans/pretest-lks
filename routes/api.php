@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -19,7 +20,12 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::resource('users', UserController::class);
+
+Route::get('/categorys/all', [CategoryController::class, 'all']);
 Route::resource('categorys', CategoryController::class);
+
 Route::resource('tags', TagController::class);
+
+Route::resource('menus', MenuController::class);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);

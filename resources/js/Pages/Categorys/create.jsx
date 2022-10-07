@@ -20,7 +20,7 @@ export default function CreateCategory() {
 
         const formData = new FormData()
 
-        formData.append('name', name)
+        formData.append('categoryname', name)
         formData.append('position', position)
 
         await axios.post(`http://localhost:8000/api/categorys`, formData).then(({ data }) => {

@@ -11,6 +11,9 @@ import CategoryEdit from '../Pages/Categorys/edit';
 import TagIndex from '../Pages/Tags/index';
 import TagCreate from '../Pages/Tags/create';
 import TagEdit from '../Pages/Tags/edit';
+import MenuIndex from '../Pages/Menus/index';
+import MenuCreate from '../Pages/Menus/create';
+import MenuEdit from '../Pages/Menus/edit';
 
 export default function Content() {
     return (
@@ -46,6 +49,10 @@ export default function Content() {
                         <Route path="tags" element={<TagIndex />} />
                         <Route path="tags/create" element={<TagCreate />} />
                         <Route path="tags/edit/:id" element={<TagEdit />} />
+
+                        <Route path="menus" element={<MenuIndex />} />
+                        <Route path="menus/create" element={<MenuCreate />} />
+                        <Route path="menus/edit/:id" element={<MenuEdit />} />
                     </Routes>
                 </div>
             </section>
