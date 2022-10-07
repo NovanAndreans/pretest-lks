@@ -16,7 +16,7 @@ export default function EditMenu() {
 
     const [id, setId] = useState(useParams().id)
     const [category, setCategory] = useState("")
-    const [categoryname, setCategoryName] = useState("Choose Category")
+    const [categoryname, setCategoryName] = useState("")
     const [name, setName] = useState("")
     const [description, setDescription] = useState("")
     const [price, setPrice] = useState("")

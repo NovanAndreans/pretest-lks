@@ -12,6 +12,7 @@ export default function EditCategory() {
     const navigate = useNavigate();
 
     const [id, setId] = useState(useParams().id)
+    const [typename, setTypeName] = useState("")
     const [name, setName] = useState("")
     const [validationError, setValidationError] = useState({})
     const [isSaving, setIsSaving] = useState(false)
@@ -20,7 +21,8 @@ export default function EditCategory() {
         axios.get(`/api/tags/${id}`)
             .then(function (response) {
                 let tag = response.data
-                setName(tag.name);
+                setName(tag.tagname);
+                setTypeName(tag.tagtype)
             })
             .catch(function (error) {
                 Swal.fire({
@@ -36,7 +38,8 @@ export default function EditCategory() {
     const handleSave = () => {
         setIsSaving(true);
         axios.patch(`/api/tags/${id}`, {
-            tagname: name
+            tagname: name,
+            tagtype: typename
         })
             .then(function (response) {
                 Swal.fire({
@@ -89,6 +92,22 @@ export default function EditCategory() {
                                     )
                                 }
                                 <Form onSubmit={handleSave}>
+                                    <Row>
+                                        <Col>
+
+                                            <Form.Group controlId="name">
+                                                <Form.Label>Type</Form.Label>
+                                                <select value={typename} onChange={(event) => {
+                                                    setTypeName(event.target.value)
+                                                }} className='form-control'>
+                                                    <option value={typename}>{typename}</option>
+                                                    <option value='worst'>Worst</option>
+                                                    <option value='normal'>Normal</option>
+                                                    <option value='best'>Best</option>
+                                                </select>
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
                                     <Row>
                                         <Col>
                                             <Form.Group controlId="nickname">

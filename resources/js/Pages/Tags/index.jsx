@@ -13,7 +13,7 @@ export default class DatatableTag extends Component {
     }
 
     render() {
-        const columns = ['name'];
+        const columns = ['tagname', 'tagtype'];
         return (
             <Layout>
                 <div className="container">

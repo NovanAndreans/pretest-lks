@@ -24,6 +24,7 @@ Route::resource('users', UserController::class);
 Route::get('/categorys/all', [CategoryController::class, 'all']);
 Route::resource('categorys', CategoryController::class);
 
+Route::get('/tags/all', [TagController::class, 'all']);
 Route::resource('tags', TagController::class);
 
 Route::resource('menus', MenuController::class);

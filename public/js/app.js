@@ -6798,7 +6798,7 @@ function EditMenu() {
       category = _useState6[0],
       setCategory = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Choose Category"),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState8 = _slicedToArray(_useState7, 2),
       categoryname = _useState8[0],
       setCategoryName = _useState8[1];
@@ -7199,10 +7199,15 @@ function CreateCategory() {
       name = _useState2[0],
       setName = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      validationError = _useState4[0],
-      setValidationError = _useState4[1];
+      type = _useState4[0],
+      setType = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+      _useState6 = _slicedToArray(_useState5, 2),
+      validationError = _useState6[0],
+      setValidationError = _useState6[1];
 
   var createTag = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
@@ -7214,7 +7219,8 @@ function CreateCategory() {
               e.preventDefault();
               formData = new FormData();
               formData.append('tagname', name);
-              _context.next = 5;
+              formData.append('tagtype', type);
+              _context.next = 6;
               return axios__WEBPACK_IMPORTED_MODULE_2___default().post("http://localhost:8000/api/tags", formData).then(function (_ref2) {
                 var data = _ref2.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
@@ -7235,7 +7241,7 @@ function CreateCategory() {
                 }
               });
 
-            case 5:
+            case 6:
             case "end":
               return _context.stop();
           }
@@ -7292,6 +7298,34 @@ function CreateCategory() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"], {
                 onSubmit: createTag,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Group, {
+                      controlId: "name",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
+                        children: "Type"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
+                        value: type,
+                        onChange: function onChange(event) {
+                          setType(event.target.value);
+                        },
+                        className: "form-control",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: "",
+                          children: "Choose Type"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: "worst",
+                          children: "Worst"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: "normal",
+                          children: "Normal"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: "best",
+                          children: "Best"
+                        })]
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_7__["default"], {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_8__["default"], {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Group, {
                       controlId: "nickname",
@@ -7381,23 +7415,29 @@ function EditCategory() {
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      name = _useState4[0],
-      setName = _useState4[1];
+      typename = _useState4[0],
+      setTypeName = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState6 = _slicedToArray(_useState5, 2),
-      validationError = _useState6[0],
-      setValidationError = _useState6[1];
+      name = _useState6[0],
+      setName = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
       _useState8 = _slicedToArray(_useState7, 2),
-      isSaving = _useState8[0],
-      setIsSaving = _useState8[1];
+      validationError = _useState8[0],
+      setValidationError = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState10 = _slicedToArray(_useState9, 2),
+      isSaving = _useState10[0],
+      setIsSaving = _useState10[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/tags/".concat(id)).then(function (response) {
       var tag = response.data;
-      setName(tag.name);
+      setName(tag.tagname);
+      setTypeName(tag.tagtype);
     })["catch"](function (error) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'error',
@@ -7411,7 +7451,8 @@ function EditCategory() {
   var handleSave = function handleSave() {
     setIsSaving(true);
     axios__WEBPACK_IMPORTED_MODULE_2___default().patch("/api/tags/".concat(id), {
-      tagname: name
+      tagname: name,
+      tagtype: typename
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'success',
@@ -7476,6 +7517,34 @@ function EditCategory() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"], {
                 onSubmit: handleSave,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Group, {
+                      controlId: "name",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
+                        children: "Type"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
+                        value: typename,
+                        onChange: function onChange(event) {
+                          setTypeName(event.target.value);
+                        },
+                        className: "form-control",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: typename,
+                          children: typename
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: "worst",
+                          children: "Worst"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: "normal",
+                          children: "Normal"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                          value: "best",
+                          children: "Best"
+                        })]
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_7__["default"], {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_8__["default"], {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Group, {
                       controlId: "nickname",
@@ -7578,7 +7647,7 @@ var DatatableTag = /*#__PURE__*/function (_Component) {
   _createClass(DatatableTag, [{
     key: "render",
     value: function render() {
-      var columns = ['name'];
+      var columns = ['tagname', 'tagtype'];
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "container",

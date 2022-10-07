@@ -12,6 +12,7 @@ export default function CreateCategory() {
     const navigate = useNavigate();
 
     const [name, setName] = useState("")
+    const [type, setType] = useState("")
     const [validationError, setValidationError] = useState({})
 
     const createTag = async (e) => {
@@ -20,6 +21,7 @@ export default function CreateCategory() {
         const formData = new FormData()
 
         formData.append('tagname', name)
+        formData.append('tagtype', type)
 
         await axios.post(`http://localhost:8000/api/tags`, formData).then(({ data }) => {
             Swal.fire({
@@ -69,6 +71,22 @@ export default function CreateCategory() {
                                     )
                                 }
                                 <Form onSubmit={createTag}>
+                                    <Row>
+                                        <Col>
+
+                                            <Form.Group controlId="name">
+                                                <Form.Label>Type</Form.Label>
+                                                <select value={type} onChange={(event) => {
+                                                    setType(event.target.value)
+                                                }} className='form-control'>
+                                                    <option value=''>Choose Type</option>
+                                                    <option value='worst'>Worst</option>
+                                                    <option value='normal'>Normal</option>
+                                                    <option value='best'>Best</option>
+                                                </select>
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
                                     <Row>
                                         <Col>
                                             <Form.Group controlId="nickname">

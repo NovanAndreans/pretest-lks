@@ -16,6 +16,7 @@ class CreateTagsTable extends Migration
         Schema::create('tags', function (Blueprint $table) {
             $table->id('idTag');
             $table->string('tagname', 50);
+            $table->enum('tagtype', ['worst', 'normal', 'best']);
         });
     }
 

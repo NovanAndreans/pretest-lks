@@ -23,6 +23,14 @@ class TagController extends Controller
     {
         $this->tag = $tag;
     }
+
+    public function all()
+    {
+        $query = $this->tag->all();
+
+        return $query;
+    }
+
     /**
      * Display a listing of the resource.
      *
