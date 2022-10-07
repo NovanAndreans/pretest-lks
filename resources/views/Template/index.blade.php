@@ -31,13 +31,30 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> -->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/templatemo-space-dynamic.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animated.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
 
     <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
 
     <div id="root"></div>
@@ -90,26 +107,13 @@
     <script src="{{ asset('plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-    <!-- Page specific script -->
-    <script>
-        $(function() {
-            $("#table").DataTable({
-                "responsive": true,
-                "lengthChange": false,
-                "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            // $('#example2').DataTable({
-            //     "paging": true,
-            //     "lengthChange": false,
-            //     "searching": false,
-            //     "ordering": true,
-            //     "info": true,
-            //     "autoWidth": false,
-            //     "responsive": true,
-            // });
-        });
-    </script>
+
+    <!-- <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script> -->
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
+    <script src="{{ asset('assets/js/animation.js') }}"></script>
+    <script src="{{ asset('assets/js/imagesloaded.js') }}"></script>
+    <script src="{{ asset('assets/js/templatemo-custom.js') }}"></script>
 
     <script src="{{ mix('js/app.js') }}"></script>
 

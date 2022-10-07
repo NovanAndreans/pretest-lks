@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export default function Sidebar() {
     return (
-        <aside className="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="index3.html" className="brand-link">
+        <aside className="main-sidebar sidebar-primary elevation-4">
+            <a href="" className="brand-link">
                 <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: " .8" }} />
                 <span className="brand-text font-weight-light">AdminLTE 3</span>
             </a>
@@ -29,40 +29,29 @@ export default function Sidebar() {
                                 <p>Dashboard</p>
                             </Link>
                         </li>
-                        <li className="nav-item menu-open">
-                            <a href="#" className="nav-link active">
+                        <li className="nav-item">
+                            <Link className="nav-link js-scroll-trigger" to={'/users'}>
                                 <i className="far fa-circle nav-icon"></i>
-                                <p>
-                                    Masters
-                                    <i className="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul className="nav nav-treeview">
-                                <li className="nav-item">
-                                    <Link className="nav-link js-scroll-trigger" to={'/users'}>
-                                        <i className="far fa-circle nav-icon"></i>
-                                        <p>Users</p>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link js-scroll-trigger" to={'/categorys'}>
-                                        <i className="far fa-circle nav-icon"></i>
-                                        <p>Category</p>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link js-scroll-trigger" to={'/tags'}>
-                                        <i className="far fa-circle nav-icon"></i>
-                                        <p>Tag</p>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link js-scroll-trigger" to={'/menus'}>
-                                        <i className="far fa-circle nav-icon"></i>
-                                        <p>Menu</p>
-                                    </Link>
-                                </li>
-                            </ul>
+                                <p>Users</p>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link js-scroll-trigger" to={'/categorys'}>
+                                <i className="far fa-circle nav-icon"></i>
+                                <p>Category</p>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link js-scroll-trigger" to={'/tags'}>
+                                <i className="far fa-circle nav-icon"></i>
+                                <p>Tag</p>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link js-scroll-trigger" to={'/menus'}>
+                                <i className="far fa-circle nav-icon"></i>
+                                <p>Menu</p>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
