@@ -5,9 +5,12 @@ import UserIndex from "../Pages/Users/index"
 import UserCreate from "../Pages/Users/create"
 import UserEdit from "../Pages/Users/edit"
 import Dashboard from '../Pages/Dashboard';
-import CategoryIndex from '../Pages/Category/index';
-import CategoryCreate from '../Pages/Category/create';
-import CategoryEdit from '../Pages/Category/edit';
+import CategoryIndex from '../Pages/Categorys/index';
+import CategoryCreate from '../Pages/Categorys/create';
+import CategoryEdit from '../Pages/Categorys/edit';
+import TagIndex from '../Pages/Tags/index';
+import TagCreate from '../Pages/Tags/create';
+import TagEdit from '../Pages/Tags/edit';
 
 export default function Content() {
     return (
@@ -39,7 +42,10 @@ export default function Content() {
                         <Route path="categorys" element={<CategoryIndex />} />
                         <Route path="categorys/create" element={<CategoryCreate />} />
                         <Route path="categorys/edit/:id" element={<CategoryEdit />} />
-                        {/* <Route path="/show/:id"  element={<ProjectShow/>} /> */}
+
+                        <Route path="tags" element={<TagIndex />} />
+                        <Route path="tags/create" element={<TagCreate />} />
+                        <Route path="tags/edit/:id" element={<TagEdit />} />
                     </Routes>
                 </div>
             </section>

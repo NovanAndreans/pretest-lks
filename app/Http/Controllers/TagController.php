@@ -2,26 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Http\Resources\UserResource;
+use App\Models\Tag;
+use App\Http\Resources\TagResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class UserController extends Controller
+class TagController extends Controller
 {
     /**
-     * @var User
+     * @var Tag
      */
-    protected $user;
+    protected $tag;
 
     /**
      * UsersController constructor.
      *
-     * @param User $user
+     * @param Tag $tag
      */
-    public function __construct(User $user)
+    public function __construct(Tag $tag)
     {
-        $this->user = $user;
+        $this->tag = $tag;
     }
     /**
      * Display a listing of the resource.
@@ -30,10 +30,10 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $this->user->orderBy($request->column, $request->order);
+        $query = $this->tag->orderBy($request->column, $request->order);
         $users = $query->paginate($request->per_page ?? 5);
 
-        return UserResource::collection($users);
+        return TagResource::collection($users);
     }
 
     /**
@@ -52,10 +52,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $req)
+    public function store(Request $request)
     {
-        $insert = collect($req->only($this->user->getFillable()))->filter();
-        $this->user->create($insert->toArray());
+        $insert = collect($request->only($this->tag->getFillable()))->filter();
+        $this->tag->create($insert->toArray());
 
         return response()->json(['message' => 'Success Create']);
     }
@@ -63,35 +63,36 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return $this->user->findOrFail($id);
+        return $this->tag->findOrFail($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Tag $tag)
     {
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
     public function update($id, Request $request)
     {
-        $row = $this->user->findOrFail($id);
-        $update = collect($request->only($this->user->getFillable()));
+        $row = $this->tag->findOrFail($id);
+        $update = collect($request->only($this->tag->getFillable()));
         $row->update($update->toArray());
 
         return response()->json(['message' => 'Success Create']);
@@ -100,14 +101,14 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         DB::beginTransaction();
         try {
-            $this->user->findOrFail($id)->delete();
+            $this->tag->findOrFail($id)->delete();
             DB::commit();
             return response()->json(['message' => 'Success Delete']);
         } catch (\Throwable $th) {
