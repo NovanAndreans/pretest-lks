@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use App\Models\MenusTags;
+use App\Models\Comment;
 use App\Http\Resources\MenuResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -104,10 +106,12 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, MenusTags $menusTags, Comment $comment)
     {
         DB::beginTransaction();
         try {
+            $comment->where('idMenu', $id)->delete();
+            $menusTags->where('idMenu', $id)->delete();
             $this->menu->findOrFail($id)->delete();
             DB::commit();
             return response()->json(['message' => 'Success Delete']);

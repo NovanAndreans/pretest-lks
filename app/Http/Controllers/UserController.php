@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Comment;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -103,10 +104,11 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, Comment $comment)
     {
         DB::beginTransaction();
         try {
+            $comment->where('idUser', $id)->delete();
             $this->user->findOrFail($id)->delete();
             DB::commit();
             return response()->json(['message' => 'Success Delete']);

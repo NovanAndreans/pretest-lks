@@ -2,36 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tag;
 use App\Models\MenusTags;
-use App\Http\Resources\TagResource;
+use App\Http\Resources\MenuTagResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class TagController extends Controller
+class MenusTagsController extends Controller
 {
     /**
-     * @var Tag
+     * @var MenusTags
      */
-    protected $tag;
+    protected $menusTags;
 
     /**
      * UsersController constructor.
      *
-     * @param Tag $tag
+     * @param MenusTags $tag
      */
-    public function __construct(Tag $tag)
+    public function __construct(MenusTags $menusTags)
     {
-        $this->tag = $tag;
+        $this->menusTags = $menusTags;
     }
-
-    public function all()
-    {
-        $query = $this->tag->all();
-
-        return $query;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -39,10 +30,10 @@ class TagController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $this->tag->orderBy($request->column, $request->order);
+        $query = $this->menusTags->orderBy($request->column, $request->order);
         $users = $query->paginate($request->per_page ?? 5);
 
-        return TagResource::collection($users);
+        return MenuTagResource::collection($users);
     }
 
     /**
@@ -63,8 +54,8 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        $insert = collect($request->only($this->tag->getFillable()))->filter();
-        $this->tag->create($insert->toArray());
+        $insert = collect($request->only($this->menusTags->getFillable()))->filter();
+        $this->menusTags->create($insert->toArray());
 
         return response()->json(['message' => 'Success Create']);
     }
@@ -72,21 +63,21 @@ class TagController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\MenusTags  $menusTags
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return $this->tag->findOrFail($id);
+        return $this->menusTags->findOrFail($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\MenusTags  $menusTags
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tag $tag)
+    public function edit(MenusTags $menusTags)
     {
         //
     }
@@ -95,13 +86,13 @@ class TagController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\MenusTags  $menusTags
      * @return \Illuminate\Http\Response
      */
     public function update($id, Request $request)
     {
-        $row = $this->tag->findOrFail($id);
-        $update = collect($request->only($this->tag->getFillable()));
+        $row = $this->menusTags->findOrFail($id);
+        $update = collect($request->only($this->menusTags->getFillable()));
         $row->update($update->toArray());
 
         return response()->json(['message' => 'Success Create']);
@@ -110,15 +101,14 @@ class TagController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\MenusTags  $menusTags
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id, MenusTags $menusTags)
+    public function destroy($id)
     {
         DB::beginTransaction();
         try {
-            $menusTags->where('idTag', $id)->delete();
-            $this->tag->findOrFail($id)->delete();
+            $this->menusTags->findOrFail($id)->delete();
             DB::commit();
             return response()->json(['message' => 'Success Delete']);
         } catch (\Throwable $th) {
