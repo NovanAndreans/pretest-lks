@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; Link
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import UserIndex from "../Pages/Users/index"
 import UserCreate from "../Pages/Users/create"
 import UserEdit from "../Pages/Users/edit"
@@ -36,7 +36,7 @@ export default function Content() {
             <section className="content">
                 <div className="container-fluid">
                     <Routes>
-                        <Route exact path="/" element={<Dashboard />} />
+                        <Route exact path="/dashboard" element={<Dashboard />} />
 
                         <Route path="users" element={<UserIndex />} />
                         <Route path="users/create" element={<UserCreate />} />

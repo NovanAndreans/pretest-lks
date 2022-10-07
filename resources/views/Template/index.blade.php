@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixedv">
 
     <!-- Preloader -->
     <div id="js-preloader" class="js-preloader">
