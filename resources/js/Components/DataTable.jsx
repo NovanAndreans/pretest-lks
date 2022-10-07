@@ -138,7 +138,7 @@ export default class DataTable extends Component {
                         <div className="d-flex justify-content-around"><Button
                             className="btn-sm btn-warning">
                             <Link
-                                to={`${this.state.link}/edit/${data.id}`}><i className="fas fa-edit"></i>
+                                to={`/${this.state.link}/edit/${data.id}`}><i className="fas fa-edit"></i>
                             </Link></Button>
                             <Button className="btn-sm btn-danger" onClick={
                                 () => this.handleDelete(data)

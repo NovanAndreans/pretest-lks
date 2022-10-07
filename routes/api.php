@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -17,5 +18,6 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::resource('users', UserController::class);
+Route::resource('categorys', CategoryController::class);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);

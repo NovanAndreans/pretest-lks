@@ -44,6 +44,12 @@ export default function Sidebar() {
                                         <p>Users</p>
                                     </Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link js-scroll-trigger" to={'/categorys'}>
+                                        <i className="far fa-circle nav-icon"></i>
+                                        <p>Category</p>
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                     </ul>

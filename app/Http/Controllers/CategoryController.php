@@ -2,26 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Http\Resources\UserResource;
+use App\Models\Category;
+use App\Http\Resources\CategoryResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class UserController extends Controller
+class CategoryController extends Controller
 {
     /**
-     * @var User
+     * @var Category
      */
-    protected $user;
+    protected $category;
 
     /**
      * UsersController constructor.
      *
      * @param User $user
      */
-    public function __construct(User $user)
+    public function __construct(Category $category)
     {
-        $this->user = $user;
+        $this->category = $category;
     }
     /**
      * Display a listing of the resource.
@@ -30,10 +30,10 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $this->user->orderBy($request->column, $request->order);
+        $query = $this->category->orderBy($request->column, $request->order);
         $users = $query->paginate($request->per_page ?? 5);
 
-        return UserResource::collection($users);
+        return CategoryResource::collection($users);
     }
 
     /**
@@ -52,10 +52,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $req)
+    public function store(Request $request)
     {
-        $insert = collect($req->only($this->user->getFillable()))->filter();
-        $this->user->create($insert->toArray());
+        $insert = collect($request->only($this->category->getFillable()))->filter();
+        $this->category->create($insert->toArray());
 
         return response()->json(['message' => 'Success Create']);
     }
@@ -63,35 +63,36 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return User::findOrFail($id);
+        return $this->category->findOrFail($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Category $category)
     {
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function update($id, Request $request)
     {
-        $row = $this->user->findOrFail($id);
-        $update = collect($request->only($this->user->getFillable()));
+        $row = $this->category->findOrFail($id);
+        $update = collect($request->only($this->category->getFillable()));
         $row->update($update->toArray());
 
         return response()->json(['message' => 'Success Create']);
@@ -100,14 +101,14 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         DB::beginTransaction();
         try {
-            $this->user->findOrFail($id)->delete();
+            $this->category->findOrFail($id)->delete();
             DB::commit();
             return response()->json(['message' => 'Success Delete']);
         } catch (\Throwable $th) {

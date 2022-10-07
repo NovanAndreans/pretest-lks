@@ -5,6 +5,9 @@ import UserIndex from "../Pages/Users/index"
 import UserCreate from "../Pages/Users/create"
 import UserEdit from "../Pages/Users/edit"
 import Dashboard from '../Pages/Dashboard';
+import CategoryIndex from '../Pages/Category/index';
+import CategoryCreate from '../Pages/Category/create';
+import CategoryEdit from '../Pages/Category/edit';
 
 export default function Content() {
     return (
@@ -28,9 +31,14 @@ export default function Content() {
                 <div className="container-fluid">
                     <Routes>
                         <Route exact path="/" element={<Dashboard />} />
-                        <Route exact path="users" element={<UserIndex />} />
+
+                        <Route path="users" element={<UserIndex />} />
                         <Route path="users/create" element={<UserCreate />} />
                         <Route path="users/edit/:id" element={<UserEdit />} />
+
+                        <Route path="categorys" element={<CategoryIndex />} />
+                        <Route path="categorys/create" element={<CategoryCreate />} />
+                        <Route path="categorys/edit/:id" element={<CategoryEdit />} />
                         {/* <Route path="/show/:id"  element={<ProjectShow/>} /> */}
                     </Routes>
                 </div>

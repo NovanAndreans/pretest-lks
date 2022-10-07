@@ -73,6 +73,3 @@ export default class Dashboard extends Component {
         );
     }
 }
-
-function Title() { return 'Dashboard' };
-ReactDOM.render(<Title />, document.getElementById('title'));

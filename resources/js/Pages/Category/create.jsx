@@ -8,13 +8,11 @@ import axios from 'axios'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
 
-export default function CreateUser() {
+export default function CreateCategory() {
     const navigate = useNavigate();
 
-    const [nickname, setNickname] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [commonname, setCommonname] = useState("")
+    const [name, setName] = useState("")
+    const [position, setPosition] = useState("")
     const [validationError, setValidationError] = useState({})
 
     const createUser = async (e) => {
@@ -22,17 +20,15 @@ export default function CreateUser() {
 
         const formData = new FormData()
 
-        formData.append('nickname', nickname)
-        formData.append('email', email)
-        formData.append('password', password)
-        formData.append('commonname', commonname)
+        formData.append('name', name)
+        formData.append('position', position)
 
-        await axios.post(`http://localhost:8000/api/users`, formData).then(({ data }) => {
+        await axios.post(`http://localhost:8000/api/categorys`, formData).then(({ data }) => {
             Swal.fire({
                 icon: "success",
                 text: data.message
             })
-            navigate("/users")
+            navigate("/categorys")
         }).catch(({ response }) => {
             if (response.status === 422) {
                 setValidationError(response.data.errors)
@@ -52,7 +48,7 @@ export default function CreateUser() {
                     <div className="card">
                         <div className="card-header">
                             <div className="d-flex justify-content-between">
-                                <h4 className="card-title">Add User</h4>
+                                <h4 className="card-title">Add Category</h4>
                             </div>
                         </div>
                         <div className="card-body">
@@ -78,9 +74,9 @@ export default function CreateUser() {
                                     <Row>
                                         <Col>
                                             <Form.Group controlId="nickname">
-                                                <Form.Label>Nickname</Form.Label>
-                                                <Form.Control type="text" value={nickname} onChange={(event) => {
-                                                    setNickname(event.target.value)
+                                                <Form.Label>Name</Form.Label>
+                                                <Form.Control type="text" value={name} onChange={(event) => {
+                                                    setName(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>
@@ -88,29 +84,9 @@ export default function CreateUser() {
                                     <Row>
                                         <Col>
                                             <Form.Group controlId="email">
-                                                <Form.Label>Email</Form.Label>
-                                                <Form.Control type="text" value={email} onChange={(event) => {
-                                                    setEmail(event.target.value)
-                                                }} />
-                                            </Form.Group>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <Form.Group controlId="password">
-                                                <Form.Label>Password</Form.Label>
-                                                <Form.Control type="password" value={password} onChange={(event) => {
-                                                    setPassword(event.target.value)
-                                                }} />
-                                            </Form.Group>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <Form.Group controlId="commonname">
-                                                <Form.Label>Full Name</Form.Label>
-                                                <Form.Control type="text" value={commonname} onChange={(event) => {
-                                                    setCommonname(event.target.value)
+                                                <Form.Label>Position</Form.Label>
+                                                <Form.Control type="text" value={position} onChange={(event) => {
+                                                    setPosition(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>

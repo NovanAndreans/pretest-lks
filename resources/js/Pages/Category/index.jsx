@@ -7,13 +7,13 @@ import ReactDOM from 'react-dom';
 import DataTable from "../../components/DataTable";
 import Layout from '../../Layouts/Layout';
 
-export default class DatatableUser extends Component {
+export default class DatatableCategory extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        const columns = ['nickname', 'email', 'commonname'];
+        const columns = ['name', 'position'];
         return (
             <Layout>
                 <div className="container">
@@ -23,12 +23,12 @@ export default class DatatableUser extends Component {
                                 <h3 className="card-title">DataTable with default features</h3>
                                 <Link
                                     className="btn btn-outline-primary"
-                                    to="/users/create">Add User
+                                    to={`/categorys/create`}>Add Category
                                 </Link>
                             </div>
                         </div>
                         <div className="card-body">
-                            <DataTable url="http://localhost:8000/api/users" columns={columns} apiLink="users" />
+                            <DataTable url="http://localhost:8000/api/categorys" columns={columns} apiLink="categorys" />
                         </div>
                     </div>
                 </div>

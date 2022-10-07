@@ -8,25 +8,21 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios'
 import Swal from 'sweetalert2';
 
-export default function EditUser() {
+export default function EditCategory() {
     const navigate = useNavigate();
 
     const [id, setId] = useState(useParams().id)
-    const [nickname, setNickname] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [commonname, setCommonname] = useState("")
+    const [name, setName] = useState("")
+    const [position, setPosition] = useState("")
     const [validationError, setValidationError] = useState({})
     const [isSaving, setIsSaving] = useState(false)
 
     useEffect(() => {
-        axios.get(`/api/users/${id}`)
+        axios.get(`/api/categorys/${id}`)
             .then(function (response) {
-                let user = response.data
-                setNickname(user.nickname);
-                setEmail(user.email);
-                setPassword(user.password);
-                setCommonname(user.commonname);
+                let category = response.data
+                setName(category.name);
+                setPosition(category.position);
             })
             .catch(function (error) {
                 Swal.fire({
@@ -41,11 +37,9 @@ export default function EditUser() {
 
     const handleSave = () => {
         setIsSaving(true);
-        axios.patch(`/api/users/${id}`, {
-            nickname: nickname,
-            email: email,
-            password: password,
-            commonname: commonname
+        axios.patch(`/api/categorys/${id}`, {
+            name: name,
+            position: position
         })
             .then(function (response) {
                 Swal.fire({
@@ -65,7 +59,7 @@ export default function EditUser() {
                 })
                 setIsSaving(false)
             });
-        navigate('/users')
+        navigate('/categorys')
     }
 
     return (
@@ -101,9 +95,9 @@ export default function EditUser() {
                                     <Row>
                                         <Col>
                                             <Form.Group controlId="nickname">
-                                                <Form.Label>Nickname</Form.Label>
-                                                <Form.Control type="text" value={nickname} onChange={(event) => {
-                                                    setNickname(event.target.value)
+                                                <Form.Label>Name</Form.Label>
+                                                <Form.Control type="text" value={name} onChange={(event) => {
+                                                    setName(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>
@@ -111,29 +105,9 @@ export default function EditUser() {
                                     <Row>
                                         <Col>
                                             <Form.Group controlId="email">
-                                                <Form.Label>Email</Form.Label>
-                                                <Form.Control type="text" value={email} onChange={(event) => {
-                                                    setEmail(event.target.value)
-                                                }} />
-                                            </Form.Group>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <Form.Group controlId="password">
-                                                <Form.Label>Password</Form.Label>
-                                                <Form.Control type="password" value={password} onChange={(event) => {
-                                                    setPassword(event.target.value)
-                                                }} />
-                                            </Form.Group>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <Form.Group controlId="commonname">
-                                                <Form.Label>Full Name</Form.Label>
-                                                <Form.Control type="text" value={commonname} onChange={(event) => {
-                                                    setCommonname(event.target.value)
+                                                <Form.Label>Position</Form.Label>
+                                                <Form.Control type="text" value={position} onChange={(event) => {
+                                                    setPosition(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>
