@@ -102,7 +102,7 @@ export default function EditUser() {
                                         <Col>
                                             <Form.Group controlId="nickname">
                                                 <Form.Label>Nickname</Form.Label>
-                                                <Form.Control type="text" value={nickname} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Nickname Here..." type="text" value={nickname} onChange={(event) => {
                                                     setNickname(event.target.value)
                                                 }} />
                                             </Form.Group>
@@ -112,7 +112,7 @@ export default function EditUser() {
                                         <Col>
                                             <Form.Group controlId="email">
                                                 <Form.Label>Email</Form.Label>
-                                                <Form.Control type="text" value={email} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Email Here..." type="email" value={email} onChange={(event) => {
                                                     setEmail(event.target.value)
                                                 }} />
                                             </Form.Group>
@@ -122,7 +122,7 @@ export default function EditUser() {
                                         <Col>
                                             <Form.Group controlId="password">
                                                 <Form.Label>Password</Form.Label>
-                                                <Form.Control type="password" value={password} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Password Here..." type="password" value={password} onChange={(event) => {
                                                     setPassword(event.target.value)
                                                 }} />
                                             </Form.Group>
@@ -132,7 +132,7 @@ export default function EditUser() {
                                         <Col>
                                             <Form.Group controlId="commonname">
                                                 <Form.Label>Full Name</Form.Label>
-                                                <Form.Control type="text" value={commonname} onChange={(event) => {
+                                                <Form.Control placeholder="Type Full Name Here..." type="text" value={commonname} onChange={(event) => {
                                                     setCommonname(event.target.value)
                                                 }} />
                                             </Form.Group>

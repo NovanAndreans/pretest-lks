@@ -12,7 +12,7 @@ export default function CreateCategory() {
     const navigate = useNavigate();
 
     const [name, setName] = useState("")
-    const [position, setPosition] = useState("")
+    // const [position, setPosition] = useState("")
     const [validationError, setValidationError] = useState({})
 
     const createUser = async (e) => {
@@ -21,7 +21,7 @@ export default function CreateCategory() {
         const formData = new FormData()
 
         formData.append('categoryname', name)
-        formData.append('position', position)
+        // formData.append('position', position)
 
         await axios.post(`http://localhost:8000/api/categorys`, formData).then(({ data }) => {
             Swal.fire({
@@ -75,22 +75,22 @@ export default function CreateCategory() {
                                         <Col>
                                             <Form.Group controlId="nickname">
                                                 <Form.Label>Name</Form.Label>
-                                                <Form.Control type="text" value={name} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Name Here..." type="text" value={name} onChange={(event) => {
                                                     setName(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>
                                     </Row>
-                                    <Row>
+                                    {/* <Row>
                                         <Col>
                                             <Form.Group controlId="email">
                                                 <Form.Label>Position</Form.Label>
-                                                <Form.Control type="text" value={position} onChange={(event) => {
+                                                <Form.Control placeholder="Type Position Here..." type="number" value={position} onChange={(event) => {
                                                     setPosition(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>
-                                    </Row>
+                                    </Row> */}
                                     <Button variant="success" className="mt-2" size="lg" block="block" type="submit">
                                         Save
                                     </Button>

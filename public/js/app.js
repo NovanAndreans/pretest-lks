@@ -5798,17 +5798,13 @@ function CreateCategory() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       name = _useState2[0],
-      setName = _useState2[1];
+      setName = _useState2[1]; // const [position, setPosition] = useState("")
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
       _useState4 = _slicedToArray(_useState3, 2),
-      position = _useState4[0],
-      setPosition = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
-      _useState6 = _slicedToArray(_useState5, 2),
-      validationError = _useState6[0],
-      setValidationError = _useState6[1];
+      validationError = _useState4[0],
+      setValidationError = _useState4[1];
 
   var createUser = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
@@ -5819,9 +5815,9 @@ function CreateCategory() {
             case 0:
               e.preventDefault();
               formData = new FormData();
-              formData.append('categoryname', name);
-              formData.append('position', position);
-              _context.next = 6;
+              formData.append('categoryname', name); // formData.append('position', position)
+
+              _context.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_2___default().post("http://localhost:8000/api/categorys", formData).then(function (_ref2) {
                 var data = _ref2.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
@@ -5842,7 +5838,7 @@ function CreateCategory() {
                 }
               });
 
-            case 6:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -5905,25 +5901,12 @@ function CreateCategory() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Name Here...",
                         type: "text",
                         value: name,
                         onChange: function onChange(event) {
                           setName(event.target.value);
-                        }
-                      })]
-                    })
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_7__["default"], {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_8__["default"], {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Group, {
-                      controlId: "email",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
-                        children: "Position"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
-                        type: "text",
-                        value: position,
-                        onChange: function onChange(event) {
-                          setPosition(event.target.value);
                         }
                       })]
                     })
@@ -6004,28 +5987,23 @@ function EditCategory() {
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       name = _useState4[0],
-      setName = _useState4[1];
+      setName = _useState4[1]; // const [position, setPosition] = useState("")
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
       _useState6 = _slicedToArray(_useState5, 2),
-      position = _useState6[0],
-      setPosition = _useState6[1];
+      validationError = _useState6[0],
+      setValidationError = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState8 = _slicedToArray(_useState7, 2),
-      validationError = _useState8[0],
-      setValidationError = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState10 = _slicedToArray(_useState9, 2),
-      isSaving = _useState10[0],
-      setIsSaving = _useState10[1];
+      isSaving = _useState8[0],
+      setIsSaving = _useState8[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/categorys/".concat(id)).then(function (response) {
       var category = response.data;
-      setName(category.categoryname);
-      setPosition(category.position);
+      setName(category.categoryname); // setPosition(category.position);
     })["catch"](function (error) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'error',
@@ -6039,8 +6017,8 @@ function EditCategory() {
   var handleSave = function handleSave() {
     setIsSaving(true);
     axios__WEBPACK_IMPORTED_MODULE_2___default().patch("/api/categorys/".concat(id), {
-      categoryname: name,
-      position: position
+      categoryname: name // position: position
+
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'success',
@@ -6111,25 +6089,12 @@ function EditCategory() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Name Here...",
                         type: "text",
                         value: name,
                         onChange: function onChange(event) {
                           setName(event.target.value);
-                        }
-                      })]
-                    })
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_7__["default"], {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_8__["default"], {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Group, {
-                      controlId: "email",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
-                        children: "Position"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
-                        type: "text",
-                        value: position,
-                        onChange: function onChange(event) {
-                          setPosition(event.target.value);
                         }
                       })]
                     })
@@ -6639,6 +6604,7 @@ function CreateMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Category"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("select", {
+                        required: true,
                         value: category,
                         onChange: function onChange(event) {
                           setCategory(event.target.value);
@@ -6670,6 +6636,8 @@ function CreateMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Name Here...",
                         type: "text",
                         value: name,
                         onChange: function onChange(event) {
@@ -6685,6 +6653,7 @@ function CreateMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Description"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("textarea", {
+                        placeholder: "Type Description Here...",
                         value: description,
                         onChange: function onChange(event) {
                           setDescription(event.target.value);
@@ -6703,6 +6672,8 @@ function CreateMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Price"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_number_format__WEBPACK_IMPORTED_MODULE_4__.NumericFormat, {
+                        required: true,
+                        placeholder: "Type Price Here...",
                         className: "form-control",
                         value: price,
                         thousandSeparator: true // prefix={'$'}
@@ -6935,6 +6906,7 @@ function EditMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Category"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("select", {
+                        required: true,
                         value: category,
                         onChange: function onChange(event) {
                           setCategory(event.target.value);
@@ -6966,6 +6938,8 @@ function EditMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Name Here...",
                         type: "text",
                         value: name,
                         onChange: function onChange(event) {
@@ -6981,6 +6955,7 @@ function EditMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Description"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("textarea", {
+                        placeholder: "Type Description Here...",
                         value: description,
                         onChange: function onChange(event) {
                           setDescription(event.target.value);
@@ -6999,8 +6974,10 @@ function EditMenu() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
                         children: "Price"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_number_format__WEBPACK_IMPORTED_MODULE_4__.NumericFormat, {
+                        placeholder: "Type Price Here...",
                         className: "form-control",
                         value: price,
+                        required: true,
                         thousandSeparator: true // prefix={'$'}
                         ,
                         onChange: function onChange(event) {
@@ -7304,6 +7281,7 @@ function CreateCategory() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Type"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
+                        required: true,
                         value: type,
                         onChange: function onChange(event) {
                           setType(event.target.value);
@@ -7332,6 +7310,8 @@ function CreateCategory() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Name Here...",
                         type: "text",
                         value: name,
                         onChange: function onChange(event) {
@@ -7523,6 +7503,7 @@ function EditCategory() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Type"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
+                        required: true,
                         value: typename,
                         onChange: function onChange(event) {
                           setTypeName(event.target.value);
@@ -7551,6 +7532,8 @@ function EditCategory() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Name Here...",
                         type: "text",
                         value: name,
                         onChange: function onChange(event) {
@@ -7866,6 +7849,8 @@ function CreateUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Nickname"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Nickname Here...",
                         type: "text",
                         value: nickname,
                         onChange: function onChange(event) {
@@ -7881,7 +7866,9 @@ function CreateUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Email"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
-                        type: "text",
+                        required: true,
+                        placeholder: "Type Email Here...",
+                        type: "email",
                         value: email,
                         onChange: function onChange(event) {
                           setEmail(event.target.value);
@@ -7896,6 +7883,8 @@ function CreateUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Password"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Password Here...",
                         type: "password",
                         value: password,
                         onChange: function onChange(event) {
@@ -7911,6 +7900,7 @@ function CreateUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Full Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        placeholder: "Type Full Name Here...",
                         type: "text",
                         value: commonname,
                         onChange: function onChange(event) {
@@ -8116,6 +8106,8 @@ function EditUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Nickname"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Nickname Here...",
                         type: "text",
                         value: nickname,
                         onChange: function onChange(event) {
@@ -8131,7 +8123,9 @@ function EditUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Email"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
-                        type: "text",
+                        required: true,
+                        placeholder: "Type Email Here...",
+                        type: "email",
                         value: email,
                         onChange: function onChange(event) {
                           setEmail(event.target.value);
@@ -8146,6 +8140,8 @@ function EditUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Password"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        required: true,
+                        placeholder: "Type Password Here...",
                         type: "password",
                         value: password,
                         onChange: function onChange(event) {
@@ -8161,6 +8157,7 @@ function EditUser() {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Label, {
                         children: "Full Name"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_6__["default"].Control, {
+                        placeholder: "Type Full Name Here...",
                         type: "text",
                         value: commonname,
                         onChange: function onChange(event) {

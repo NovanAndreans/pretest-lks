@@ -76,7 +76,7 @@ export default function CreateCategory() {
 
                                             <Form.Group controlId="name">
                                                 <Form.Label>Type</Form.Label>
-                                                <select value={type} onChange={(event) => {
+                                                <select required value={type} onChange={(event) => {
                                                     setType(event.target.value)
                                                 }} className='form-control'>
                                                     <option value=''>Choose Type</option>
@@ -91,7 +91,7 @@ export default function CreateCategory() {
                                         <Col>
                                             <Form.Group controlId="nickname">
                                                 <Form.Label>Name</Form.Label>
-                                                <Form.Control type="text" value={name} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Name Here..." type="text" value={name} onChange={(event) => {
                                                     setName(event.target.value)
                                                 }} />
                                             </Form.Group>

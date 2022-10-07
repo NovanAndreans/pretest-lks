@@ -97,7 +97,7 @@ export default function EditCategory() {
 
                                             <Form.Group controlId="name">
                                                 <Form.Label>Type</Form.Label>
-                                                <select value={typename} onChange={(event) => {
+                                                <select required value={typename} onChange={(event) => {
                                                     setTypeName(event.target.value)
                                                 }} className='form-control'>
                                                     <option value={typename}>{typename}</option>
@@ -112,7 +112,7 @@ export default function EditCategory() {
                                         <Col>
                                             <Form.Group controlId="nickname">
                                                 <Form.Label>Name</Form.Label>
-                                                <Form.Control type="text" value={name} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Name Here..." type="text" value={name} onChange={(event) => {
                                                     setName(event.target.value)
                                                 }} />
                                             </Form.Group>

@@ -13,7 +13,7 @@ export default function EditCategory() {
 
     const [id, setId] = useState(useParams().id)
     const [name, setName] = useState("")
-    const [position, setPosition] = useState("")
+    // const [position, setPosition] = useState("")
     const [validationError, setValidationError] = useState({})
     const [isSaving, setIsSaving] = useState(false)
 
@@ -22,7 +22,7 @@ export default function EditCategory() {
             .then(function (response) {
                 let category = response.data
                 setName(category.categoryname);
-                setPosition(category.position);
+                // setPosition(category.position);
             })
             .catch(function (error) {
                 Swal.fire({
@@ -39,7 +39,7 @@ export default function EditCategory() {
         setIsSaving(true);
         axios.patch(`/api/categorys/${id}`, {
             categoryname: name,
-            position: position
+            // position: position
         })
             .then(function (response) {
                 Swal.fire({
@@ -96,22 +96,22 @@ export default function EditCategory() {
                                         <Col>
                                             <Form.Group controlId="nickname">
                                                 <Form.Label>Name</Form.Label>
-                                                <Form.Control type="text" value={name} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Name Here..." type="text" value={name} onChange={(event) => {
                                                     setName(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>
                                     </Row>
-                                    <Row>
+                                    {/* <Row>
                                         <Col>
                                             <Form.Group controlId="email">
                                                 <Form.Label>Position</Form.Label>
-                                                <Form.Control type="text" value={position} onChange={(event) => {
+                                                <Form.Control placeholder="Type Position Here..." type="number" value={position} onChange={(event) => {
                                                     setPosition(event.target.value)
                                                 }} />
                                             </Form.Group>
                                         </Col>
-                                    </Row>
+                                    </Row> */}
                                     <Button disabled={isSaving} variant="success" className="mt-2" size="lg" block="block" type="submit">
                                         Save
                                     </Button>

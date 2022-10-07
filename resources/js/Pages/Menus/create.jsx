@@ -101,7 +101,7 @@ export default function CreateMenu() {
 
                                             <Form.Group controlId="name">
                                                 <Form.Label>Category</Form.Label>
-                                                <select value={category} onChange={(event) => {
+                                                <select required value={category} onChange={(event) => {
                                                     setCategory(event.target.value)
                                                 }} className='form-control'>
                                                     <option value=''>Choose Category</option>
@@ -122,7 +122,7 @@ export default function CreateMenu() {
                                         <Col>
                                             <Form.Group controlId="name">
                                                 <Form.Label>Name</Form.Label>
-                                                <Form.Control type="text" value={name} onChange={(event) => {
+                                                <Form.Control required placeholder="Type Name Here..." type="text" value={name} onChange={(event) => {
                                                     setName(event.target.value)
                                                 }} />
                                             </Form.Group>
@@ -133,6 +133,7 @@ export default function CreateMenu() {
                                             <Form.Group controlId="description">
                                                 <Form.Label>Description</Form.Label>
                                                 <textarea
+                                                    placeholder="Type Description Here..."
                                                     value={description}
                                                     onChange={(event) => { setDescription(event.target.value) }}
                                                     className="form-control"
@@ -147,6 +148,8 @@ export default function CreateMenu() {
                                             <Form.Group controlId="price">
                                                 <Form.Label>Price</Form.Label>
                                                 <NumericFormat
+                                                    required
+                                                    placeholder="Type Price Here..."
                                                     className="form-control"
                                                     value={price}
                                                     thousandSeparator={true}
