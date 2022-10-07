@@ -21,7 +21,7 @@ export default function EditCategory() {
         axios.get(`/api/categorys/${id}`)
             .then(function (response) {
                 let category = response.data
-                setName(category.name);
+                setName(category.categoryname);
                 setPosition(category.position);
             })
             .catch(function (error) {
@@ -44,7 +44,7 @@ export default function EditCategory() {
             .then(function (response) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Project updated successfully!',
+                    title: name + ' Has Been Updated',
                     showConfirmButton: false,
                     timer: 1500
                 })

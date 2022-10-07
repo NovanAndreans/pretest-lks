@@ -66,12 +66,12 @@ export default function EditMenu() {
             idCategory: category,
             menuname: name,
             description: description,
-            price: price
+            price: price.replace(',', '.')
         })
             .then(function (response) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Project updated successfully!',
+                    title: name + ' Has Been Updated',
                     showConfirmButton: false,
                     timer: 1500
                 })

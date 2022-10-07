@@ -44,7 +44,7 @@ export default function EditCategory() {
             .then(function (response) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Tag updated successfully!',
+                    title: name + ' Has Been Updated',
                     showConfirmButton: false,
                     timer: 1500
                 })

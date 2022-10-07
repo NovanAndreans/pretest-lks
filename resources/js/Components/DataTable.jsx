@@ -46,7 +46,7 @@ export default class DataTable extends Component {
                     .then(function (response) {
                         Swal.fire({
                             icon: 'success',
-                            title: 'Project deleted successfully!',
+                            title: data.name + ' Has Been Deleted',
                             showConfirmButton: false,
                             timer: 1500
                         })

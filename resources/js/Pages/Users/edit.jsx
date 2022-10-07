@@ -50,7 +50,7 @@ export default function EditUser() {
             .then(function (response) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Project updated successfully!',
+                    title: nickname + ' Has Been Updated',
                     showConfirmButton: false,
                     timer: 1500
                 })

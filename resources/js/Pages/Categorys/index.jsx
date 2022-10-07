@@ -13,7 +13,7 @@ export default class DatatableCategory extends Component {
     }
 
     render() {
-        const columns = ['name', 'position'];
+        const columns = ['categoryname', 'position'];
         return (
             <Layout>
                 <div className="container">

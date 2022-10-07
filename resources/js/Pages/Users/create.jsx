@@ -30,7 +30,7 @@ export default function CreateUser() {
         await axios.post(`http://localhost:8000/api/users`, formData).then(({ data }) => {
             Swal.fire({
                 icon: "success",
-                text: data.message
+                text: nickname + ` Has Been Created`
             })
             navigate("/users")
         }).catch(({ response }) => {

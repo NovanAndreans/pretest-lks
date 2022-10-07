@@ -16,7 +16,7 @@ class MenuResource extends JsonResource
     {
         return [
             'id'        =>  $this->idMenu,
-            'menuname'      => $this->menuname,
+            'name'      => $this->menuname,
             'categoryname'      => $this->categoryname,
             'price'    => $this->price,
         ];

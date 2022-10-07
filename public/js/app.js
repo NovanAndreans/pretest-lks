@@ -5826,7 +5826,7 @@ function CreateCategory() {
                 var data = _ref2.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
                   icon: "success",
-                  text: data.message
+                  text: name + " Has Been Created"
                 });
                 navigate("/categorys");
               })["catch"](function (_ref3) {
@@ -6024,7 +6024,7 @@ function EditCategory() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get("/api/categorys/".concat(id)).then(function (response) {
       var category = response.data;
-      setName(category.name);
+      setName(category.categoryname);
       setPosition(category.position);
     })["catch"](function (error) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
@@ -6044,7 +6044,7 @@ function EditCategory() {
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'success',
-        title: 'Project updated successfully!',
+        title: name + ' Has Been Updated',
         showConfirmButton: false,
         timer: 1500
       });
@@ -6222,7 +6222,7 @@ var DatatableCategory = /*#__PURE__*/function (_Component) {
   _createClass(DatatableCategory, [{
     key: "render",
     value: function render() {
-      var columns = ['name', 'position'];
+      var columns = ['categoryname', 'position'];
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "container",
@@ -6548,7 +6548,7 @@ function CreateMenu() {
                 var data = _ref2.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
                   icon: "success",
-                  text: data.message
+                  text: name + " Has Been Created"
                 });
                 navigate("/menus");
               })["catch"](function (_ref3) {
@@ -6864,11 +6864,11 @@ function EditMenu() {
       idCategory: category,
       menuname: name,
       description: description,
-      price: price
+      price: price.replace(',', '.')
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'success',
-        title: 'Project updated successfully!',
+        title: name + ' Has Been Updated',
         showConfirmButton: false,
         timer: 1500
       });
@@ -7225,7 +7225,7 @@ function CreateCategory() {
                 var data = _ref2.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
                   icon: "success",
-                  text: data.message
+                  text: name + " Has Been Created"
                 });
                 navigate("/tags");
               })["catch"](function (_ref3) {
@@ -7456,7 +7456,7 @@ function EditCategory() {
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'success',
-        title: 'Tag updated successfully!',
+        title: name + ' Has Been Updated',
         showConfirmButton: false,
         timer: 1500
       });
@@ -7787,7 +7787,7 @@ function CreateUser() {
                 var data = _ref2.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
                   icon: "success",
-                  text: data.message
+                  text: nickname + " Has Been Created"
                 });
                 navigate("/users");
               })["catch"](function (_ref3) {
@@ -8049,7 +8049,7 @@ function EditUser() {
     }).then(function (response) {
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
         icon: 'success',
-        title: 'Project updated successfully!',
+        title: nickname + ' Has Been Updated',
         showConfirmButton: false,
         timer: 1500
       });
@@ -8436,7 +8436,7 @@ var DataTable = /*#__PURE__*/function (_Component) {
           axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/api/".concat(_this2.state.link, "/").concat(data.id)).then(function (response) {
             sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
               icon: 'success',
-              title: 'Project deleted successfully!',
+              title: data.name + ' Has Been Deleted',
               showConfirmButton: false,
               timer: 1500
             });

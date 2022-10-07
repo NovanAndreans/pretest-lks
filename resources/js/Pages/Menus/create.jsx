@@ -33,7 +33,7 @@ export default function CreateMenu() {
         await axios.post(`http://localhost:8000/api/menus`, formData).then(({ data }) => {
             Swal.fire({
                 icon: "success",
-                text: data.message
+                text: name + ` Has Been Created`
             })
             navigate("/menus")
         }).catch(({ response }) => {

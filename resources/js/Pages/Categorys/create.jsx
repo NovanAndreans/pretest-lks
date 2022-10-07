@@ -26,7 +26,7 @@ export default function CreateCategory() {
         await axios.post(`http://localhost:8000/api/categorys`, formData).then(({ data }) => {
             Swal.fire({
                 icon: "success",
-                text: data.message
+                text: name + ` Has Been Created`
             })
             navigate("/categorys")
         }).catch(({ response }) => {
