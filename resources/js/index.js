@@ -14,11 +14,6 @@ function Index() {
             <Route exact path="/" element={
                 <div className="wrapper">
                     <LoginPage />
-                    {/* <Navbar />
-            <Sidebar />
-            <Content />
-            <Footer /> */}
-                    {/* <LandingPage /> */}
                 </div>} />
 
             <Route path="/rate" element={

@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Swal from 'sweetalert2'
 import Form from 'react-bootstrap/Form'
+import Session from 'react-session-api'
 
 export default function LoginPage() {
 
@@ -23,22 +24,22 @@ export default function LoginPage() {
         formData.append('email', email)
         formData.append('password', password)
 
-        await axios.post(`http://localhost:8000/api/users`, formData).then(({ data }) => {
+        var response = await axios.post(`http://localhost:8000/api/login`, formData)
+        if (response.data['status'] == 'success') {
             Swal.fire({
                 icon: "success",
-                text: nickname + ` Has Been Created`
+                text: `Welcome ` + response.data['data']['name']
             })
-            navigate("/users")
-        }).catch(({ response }) => {
-            if (response.status === 422) {
-                setValidationError(response.data.errors)
-            } else {
-                Swal.fire({
-                    text: response.data.message,
-                    icon: "error"
-                })
-            }
-        })
+            Session.set("name", response.data['data']['name'])
+            Session.set("fullname", response.data['data']['fullname'])
+            Session.set("email", response.data['data']['email'])
+            navigate("/rate")
+        } else {
+            Swal.fire({
+                text: 'Wrong Email or Password !',
+                icon: "warning"
+            })
+        }
     }
     return (
         <div className="mt-5 h-100 d-flex container justify-content-center" >

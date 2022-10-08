@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import UserIndex from "../Pages/Users/index"
 import UserCreate from "../Pages/Users/create"
 import UserEdit from "../Pages/Users/edit"
@@ -16,6 +16,8 @@ import MenuCreate from '../Pages/Menus/create';
 import MenuEdit from '../Pages/Menus/edit';
 
 export default function Content() {
+    const location = useLocation();
+    console.log(location.pathname);
     return (
         <div className="content-wrapper">
             <div className="content-header">
@@ -36,7 +38,7 @@ export default function Content() {
             <section className="content">
                 <div className="container-fluid">
                     <Routes>
-                        <Route exact path="/dashboard" element={<Dashboard />} />
+                        <Route exact path="/admin/dashboard" element={<Dashboard />} />
 
                         <Route path="users" element={<UserIndex />} />
                         <Route path="users/create" element={<UserCreate />} />

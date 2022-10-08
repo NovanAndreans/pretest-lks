@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-router-dom";
+import Session from 'react-session-api'
 
 export default function Sidebar() {
     return (
@@ -16,7 +17,7 @@ export default function Sidebar() {
                         <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
                     </div>
                     <div className="info">
-                        <a href="#" className="d-block">Alexander Pierce</a>
+                        <a href="#" className="d-block">{Session.get('name')}</a>
                     </div>
                 </div>
 
@@ -24,7 +25,7 @@ export default function Sidebar() {
                     <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                         <li className="nav-item">
-                            <NavLink className={({ isActive }) => (isActive ? 'nav-link js-scroll-trigger active' : 'nav-link js-scroll-trigger')} to={'/dashboard'}>
+                            <NavLink className={({ isActive }) => (isActive ? 'nav-link js-scroll-trigger active' : 'nav-link js-scroll-trigger')} to={'/admin/dashboard'}>
                                 <i className="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Dashboard</p>
                             </NavLink>

@@ -7,6 +7,7 @@ use App\Models\Comment;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -55,7 +56,7 @@ class UserController extends Controller
      */
     public function store(Request $req)
     {
-        $insert = collect($req->only($this->user->getFillable()))->filter();
+        $insert = collect($req->only($this->user->getFillable()))->filter()->put('password', Hash::make($req->get('password')));
         $this->user->create($insert->toArray());
 
         return response()->json(['message' => 'Success Create']);
@@ -92,7 +93,7 @@ class UserController extends Controller
     public function update($id, Request $request)
     {
         $row = $this->user->findOrFail($id);
-        $update = collect($request->only($this->user->getFillable()));
+        $update = collect($request->only($this->user->getFillable()))->filter()->put('password', Hash::make($request->get('password')))->except('updatedby');
         $row->update($update->toArray());
 
         return response()->json(['message' => 'Success Create']);

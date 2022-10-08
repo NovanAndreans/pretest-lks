@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Component } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-router-dom";
 
 export default class LandingPage extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ export default class LandingPage extends Component {
                                         <li className="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
                                         <li className="scroll-to-section"><a href="#blog">Blog</a></li>
                                         <li className="scroll-to-section"><a href="#contact">Message Us</a></li>
-                                        <li className="scroll-to-section"><div className="main-red-button"><a href="#contact">Contact Now</a></div></li>
+                                        <li className="scroll-to-section"><div className="main-red-button"><Link to={'/admin'}>Is Admin</Link></div></li>
                                     </ul>
                                     <a className='menu-trigger'>
                                         <span>Menu</span>
@@ -46,7 +47,7 @@ export default class LandingPage extends Component {
                                             <p>Space Dynamic is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p>
                                             <form id="search" action="#" method="GET">
                                                 <fieldset>
-                                                    <input type="address" name="address" className="email" placeholder="Your website URL..." autocomplete="on" required />
+                                                    <input type="address" name="address" className="email" placeholder="Your website URL..." autoComplete="on" required />
                                                 </fieldset>
                                                 <fieldset>
                                                     <button type="submit" className="main-button">Analyze Site</button>
@@ -328,12 +329,12 @@ export default class LandingPage extends Component {
                                     <div className="row">
                                         <div className="col-lg-6">
                                             <fieldset>
-                                                <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required />
+                                                <input type="name" name="name" id="name" placeholder="Name" autoComplete="on" required />
                                             </fieldset>
                                         </div>
                                         <div className="col-lg-6">
                                             <fieldset>
-                                                <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required />
+                                                <input type="surname" name="surname" id="surname" placeholder="Surname" autoComplete="on" required />
                                             </fieldset>
                                         </div>
                                         <div className="col-lg-12">
