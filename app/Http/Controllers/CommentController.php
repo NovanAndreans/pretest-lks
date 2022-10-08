@@ -32,7 +32,8 @@ class CommentController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $this->comment->orderBy($request->column, $request->order);
+        $query = $this->comment->join('menus', 'comments.idMenu', '=', 'menus.idMenu')
+            ->join('users', 'comments.idUser', '=', 'users.idUser')->orderBy($request->column, $request->order);
         $users = $query->paginate($request->per_page ?? 5);
 
         return CommentResource::collection($users);

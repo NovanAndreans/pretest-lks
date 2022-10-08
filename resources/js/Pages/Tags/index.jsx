@@ -28,7 +28,7 @@ export default class DatatableTag extends Component {
                             </div>
                         </div>
                         <div className="card-body">
-                            <DataTable url="http://localhost:8000/api/tags" columns={columns} apiLink="tags" />
+                            <DataTable url="http://localhost:8000/api/tags" columns={columns} apiLink="tags" edit={true} />
                         </div>
                     </div>
                 </div>

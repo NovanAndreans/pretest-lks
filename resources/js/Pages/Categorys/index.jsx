@@ -28,7 +28,7 @@ export default class DatatableCategory extends Component {
                             </div>
                         </div>
                         <div className="card-body">
-                            <DataTable url="http://localhost:8000/api/categorys" columns={columns} apiLink="categorys" />
+                            <DataTable url="http://localhost:8000/api/categorys" columns={columns} apiLink="categorys" edit={true} />
                         </div>
                     </div>
                 </div>

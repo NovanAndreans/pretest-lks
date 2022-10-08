@@ -54,6 +54,12 @@ export default function Sidebar() {
                                 <p>Menu</p>
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link js-scroll-trigger" to={'/comments'}>
+                                <i className="far fa-circle nav-icon"></i>
+                                <p>Comment</p>
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>

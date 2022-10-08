@@ -24,6 +24,7 @@ export default class DataTable extends Component {
             },
             first_page: 1,
             current_page: 1,
+            edit: this.props.edit,
             sorted_column: this.props.columns[0],
             offset: 4,
             order: 'asc',
@@ -123,6 +124,15 @@ export default class DataTable extends Component {
     }
 
     List() {
+
+        const If = ({ condition, children }) => {
+            if (condition) {
+                return children;
+            } else {
+                return null;
+            }
+        };
+
         if (this.state.entities.data.length > 0) {
             return this.state.entities.data.map(data => {
                 return <tr key={data.id}>
@@ -135,11 +145,15 @@ export default class DataTable extends Component {
 
                     })}
                     <td>
-                        <div className="d-flex justify-content-around"><Button
-                            className="btn-sm btn-warning">
-                            <Link
-                                to={`/${this.state.link}/edit/${data.id}`}><i className="fas fa-edit"></i>
-                            </Link></Button>
+                        <div className="d-flex justify-content-around">
+                            <If condition={this.state.edit} children={<Button
+                                className="btn-sm btn-warning">
+                                <Link
+                                    to={`/${this.state.link}/edit/${data.id}`}><i className="fas fa-edit"></i>
+                                </Link></Button>
+                            }>
+                            </If>
+
                             <Button className="btn-sm btn-danger" onClick={
                                 () => this.handleDelete(data)
 

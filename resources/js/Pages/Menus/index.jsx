@@ -28,7 +28,7 @@ export default class DatatableMenu extends Component {
                             </div>
                         </div>
                         <div className="card-body">
-                            <DataTable url="http://localhost:8000/api/menus" columns={columns} apiLink="menus" />
+                            <DataTable url="http://localhost:8000/api/menus" columns={columns} apiLink="menus" edit={true} />
                         </div>
                     </div>
                 </div>

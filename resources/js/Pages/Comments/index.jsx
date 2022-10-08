@@ -7,28 +7,22 @@ import ReactDOM from 'react-dom';
 import DataTable from "../../components/DataTable";
 import Layout from '../../Layouts/Layout';
 
-export default class DatatableUser extends Component {
+export default class DatatableComment extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        const columns = ['nickname', 'email', 'commonname'];
+        const columns = ['commonname', 'menuname', 'comment'];
         return (
             <Layout>
                 <div className="container">
                     <div className="card">
                         <div className="card-header">
-                            <div className="d-flex justify-content-between">
-                                <h3 className="card-title">DataTable with default features</h3>
-                                <Link
-                                    className="btn btn-outline-primary"
-                                    to="/users/create">Add User
-                                </Link>
-                            </div>
+                            <h3 className="card-title">DataTable with default features</h3>
                         </div>
                         <div className="card-body">
-                            <DataTable url="http://localhost:8000/api/users" columns={columns} apiLink="users" edit={true} />
+                            <DataTable url="http://localhost:8000/api/comments" columns={columns} apiLink="comments" edit={false} />
                         </div>
                     </div>
                 </div>

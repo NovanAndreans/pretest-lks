@@ -20,6 +20,7 @@ import TagEdit from './Pages/Tags/edit';
 import MenuIndex from './Pages/Menus/index';
 import MenuCreate from './Pages/Menus/create';
 import MenuEdit from './Pages/Menus/edit';
+import CommentIndex from './Pages/Comments/index';
 
 function Index() {
     return (
@@ -134,6 +135,14 @@ function Index() {
                     <Navbar />
                     <Sidebar />
                     <Content content={<MenuEdit />} />
+                    <Footer />
+                </div>} />
+
+            <Route path="/comments" element={
+                <div className="wrapper">
+                    <Navbar />
+                    <Sidebar />
+                    <Content content={<CommentIndex />} />
                     <Footer />
                 </div>} />
 
