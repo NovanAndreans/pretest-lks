@@ -29,7 +29,7 @@ export default function Navbar() {
         }
     }
     return (
-        <nav className="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav className="main-header navbar navbar-expand navbar-dark">
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars"></i></a>
@@ -47,7 +47,7 @@ export default function Navbar() {
                         <img src="dist/img/user2-160x160.jpg" className="user-image img-circle elevation-2" alt=" User Image" />
                         <span className="hidden-xs">{Session.get('fullname')}</span>
                     </a>
-                    <ul className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <ul className="dropdown-menu dropdown-menu-lg dropdown-menu-right bg-dark">
                         <li className="user-header">
                             <img src="dist/img/user2-160x160.jpg" className="img-circle img-profil"
                                 alt="User Image" />

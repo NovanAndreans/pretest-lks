@@ -55,7 +55,7 @@ export default function LoginPage() {
                                 <Col>
                                     <Form.Group controlId="email">
                                         <Form.Label>Email</Form.Label>
-                                        <Form.Control required placeholder="Type Email Here..." type="email" value={email} onChange={(event) => {
+                                        <Form.Control autoFocus color='' required placeholder="Type Email Here..." type="email" value={email} onChange={(event) => {
                                             setEmail(event.target.value)
                                         }} />
                                     </Form.Group>
