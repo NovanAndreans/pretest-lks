@@ -32,6 +32,13 @@ class TagController extends Controller
         return $query;
     }
 
+    public function where(Request $request)
+    {
+        $query = $this->tag->where('tagtype', $request->type)->get();
+
+        return response()->json(['message' => 'success', 'data' => $query]);
+    }
+
     /**
      * Display a listing of the resource.
      *

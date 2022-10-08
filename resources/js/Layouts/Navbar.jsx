@@ -42,25 +42,11 @@ export default function Navbar() {
                 </li>
             </ul>
             <ul className="navbar-nav ml-auto">
-                <li className="nav-item dropdown user user-menu">
-                    <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <img src="dist/img/user2-160x160.jpg" className="user-image img-circle elevation-2" alt=" User Image" />
-                        <span className="hidden-xs">{Session.get('fullname')}</span>
-                    </a>
-                    <ul className="dropdown-menu dropdown-menu-lg dropdown-menu-right bg-dark">
-                        <li className="user-header">
-                            <img src="dist/img/user2-160x160.jpg" className="img-circle img-profil"
-                                alt="User Image" />
-                            <p>
-                                <center>{Session.get('fullname')} <br /> {Session.get('email')}</center>
-                            </p>
-                        </li>
-                        <li className="user-footer mt-4">
-                            <Button variant="danger" className=" w-100" size="lg" block="block" onClick={logout}>
-                                Logout
-                            </Button>
-                        </li>
-                    </ul>
+
+                <li className="nav-item">
+                    <Button variant="danger" className="w-100" size="md" block="block" onClick={logout}>
+                        Logout
+                    </Button>
                 </li>
             </ul>
         </nav>

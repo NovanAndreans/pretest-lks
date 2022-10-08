@@ -19,8 +19,8 @@ class CreateMenusTable extends Migration
             $table->string('menuname', 150);
             $table->text('description')->nullable();
             $table->decimal('price', $precision = 5, $scale = 2);
-            $table->integer('ratingcount')->nullable();
-            $table->integer('ratingsum')->nullable();
+            $table->integer('ratingcount')->default(0);
+            $table->integer('ratingsum')->default(0);
 
             $table->foreign('idCategory')->references('idCategory')->on('categorys')->onDelete('cascade');
         });

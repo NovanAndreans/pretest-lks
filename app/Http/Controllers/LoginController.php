@@ -28,6 +28,7 @@ class LoginController extends Controller
             $user = Auth::user();
             //Setting login response 
             $success['token'] = $this->apiToken;
+            $success['id'] =  $user->idUser;
             $success['name'] =  $user->nickname;
             $success['fullname'] =  $user->commonname;
             $success['email'] =  $user->email;

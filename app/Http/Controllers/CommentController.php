@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Menu;
+use App\Models\MenusTags;
 use App\Http\Resources\CommentResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -52,12 +54,35 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Menu $menu, MenusTags $menusTags)
     {
-        $insert = collect($request->only($this->comment->getFillable()))->filter();
-        $this->comment->create($insert->toArray());
+        $tag = json_decode($request->tag);
+        DB::beginTransaction();
+        try {
+            $menus = $menu->findOrFail($request->idMenu);
+            $count = $menus->ratingcount;
+            $count++;
+            $val = $menus->ratingsum;
+            $val = $val += $request->value;
+            $menus->update([
+                'ratingcount' => $count,
+                'ratingsum' => $val,
+            ]);
+            $insert = collect($request->only($this->comment->getFillable()))->filter();
+            $this->comment->create($insert->toArray());
+            foreach ($tag as $key) {
+                $menusTags->create([
+                    'idTag' => $key->idTag,
+                    'idMenu' => $request->idMenu
+                ]);
+            }
+            DB::commit();
 
-        return response()->json(['message' => 'Success Create']);
+            return response()->json(['message' => 'Success Create']);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return response()->json(['message' => $th]);
+        }
     }
 
     /**

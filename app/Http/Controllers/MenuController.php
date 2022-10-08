@@ -25,6 +25,21 @@ class MenuController extends Controller
     {
         $this->menu = $menu;
     }
+
+    public function all()
+    {
+        $query = $this->menu->all();
+
+        return $query;
+    }
+
+    public function where($id)
+    {
+        $query = $this->menu->where('idCategory', $id)->get();
+
+        return $query;
+    }
+
     /**
      * Display a listing of the resource.
      *

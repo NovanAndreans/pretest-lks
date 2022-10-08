@@ -30,6 +30,7 @@ export default function LoginPage() {
                 icon: "success",
                 text: `Welcome ` + response.data['data']['name']
             })
+            Session.set("id", response.data['data']['id'])
             Session.set("name", response.data['data']['name'])
             Session.set("fullname", response.data['data']['fullname'])
             Session.set("email", response.data['data']['email'])

@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,12 @@ Route::get('/categorys/all', [CategoryController::class, 'all']);
 Route::resource('categorys', CategoryController::class);
 
 Route::get('/tags/all', [TagController::class, 'all']);
+Route::post('/tags/where', [TagController::class, 'where']);
 Route::resource('tags', TagController::class);
 
+Route::get('/menus/all', [MenuController::class, 'all']);
 Route::resource('menus', MenuController::class);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+
+Route::resource('comments', CommentController::class);

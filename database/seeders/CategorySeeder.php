@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
      */
     public function run(Category $category)
     {
-        $category->categoryname = '5 Stars';
+        $category->categoryname = 'Dessert';
         $category->position = 9;
         $category->save();
     }

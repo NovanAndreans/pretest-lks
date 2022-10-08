@@ -9,6 +9,8 @@ class MenusTags extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = "menus_tags";
 
     protected $fillable = [
