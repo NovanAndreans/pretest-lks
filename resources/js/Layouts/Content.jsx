@@ -35,27 +35,8 @@ export default function Content({ content }) {
                 </div>
             </div> */}
             <section className="content">
-                <div className="container-fluid">
+                <div className="container-fluid mt-5">
                     {content}
-                    <Routes>
-                        <Route exact path="/dashboard" element={<Dashboard />} />
-
-                        <Route path="users" element={<UserIndex />} />
-                        <Route path="users/create" element={<UserCreate />} />
-                        <Route path="users/edit/:id" element={<UserEdit />} />
-
-                        <Route path="categorys" element={<CategoryIndex />} />
-                        <Route path="categorys/create" element={<CategoryCreate />} />
-                        <Route path="categorys/edit/:id" element={<CategoryEdit />} />
-
-                        <Route path="tags" element={<TagIndex />} />
-                        <Route path="tags/create" element={<TagCreate />} />
-                        <Route path="tags/edit/:id" element={<TagEdit />} />
-
-                        <Route path="menus" element={<MenuIndex />} />
-                        <Route path="menus/create" element={<MenuCreate />} />
-                        <Route path="menus/edit/:id" element={<MenuEdit />} />
-                    </Routes>
                 </div>
             </section>
         </div>

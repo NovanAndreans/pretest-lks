@@ -19,6 +19,8 @@ class MenuResource extends JsonResource
             'name'      => $this->menuname,
             'categoryname'      => $this->categoryname,
             'price'    => $this->price,
+            'ratingcount'    => $this->ratingcount,
+            'ratingsum'      => $this->ratingsum,
         ];
     }
 }

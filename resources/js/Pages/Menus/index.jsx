@@ -13,7 +13,7 @@ export default class DatatableMenu extends Component {
     }
 
     render() {
-        const columns = ['categoryname', 'menuname', 'price'];
+        const columns = ['categoryname', 'menuname', 'price', 'ratecount', 'ratesum'];
         return (
             <Layout>
                 <div className="container">
