@@ -7042,13 +7042,13 @@ function LandingPage() {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
                 className: "nav-link scrollto",
                 href: "#chefs",
-                children: "Chefs"
+                children: "Rate"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
                 className: "nav-link scrollto",
                 href: "#contact",
-                children: "Contact"
+                children: "Comment"
               })
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {

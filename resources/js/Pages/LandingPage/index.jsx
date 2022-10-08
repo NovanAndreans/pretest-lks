@@ -150,8 +150,8 @@ export default function LandingPage() {
                             <li><Link to={'/dashboard'}>Is Admin</Link></li>
                             <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
                             <li><a className="nav-link scrollto" href="#menu">Menu</a></li>
-                            <li><a className="nav-link scrollto" href="#chefs">Chefs</a></li>
-                            <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
+                            <li><a className="nav-link scrollto" href="#chefs">Rate</a></li>
+                            <li><a className="nav-link scrollto" href="#contact">Comment</a></li>
                         </ul>
                         <i className="bi bi-list mobile-nav-toggle"></i>
                     </nav>
