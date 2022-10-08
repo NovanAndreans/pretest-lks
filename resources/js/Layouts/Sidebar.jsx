@@ -25,7 +25,7 @@ export default function Sidebar() {
                     <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                         <li className="nav-item">
-                            <NavLink className={({ isActive }) => (isActive ? 'nav-link js-scroll-trigger active' : 'nav-link js-scroll-trigger')} to={'/admin/dashboard'}>
+                            <NavLink className={({ isActive }) => (isActive ? 'nav-link js-scroll-trigger active' : 'nav-link js-scroll-trigger')} to={'/dashboard'}>
                                 <i className="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Dashboard</p>
                             </NavLink>

@@ -15,9 +15,8 @@ import MenuIndex from '../Pages/Menus/index';
 import MenuCreate from '../Pages/Menus/create';
 import MenuEdit from '../Pages/Menus/edit';
 
-export default function Content() {
-    const location = useLocation();
-    console.log(location.pathname);
+export default function Content({ content }) {
+
     return (
         <div className="content-wrapper">
             <div className="content-header">
@@ -37,8 +36,9 @@ export default function Content() {
             </div>
             <section className="content">
                 <div className="container-fluid">
+                    {content}
                     <Routes>
-                        <Route exact path="/admin/dashboard" element={<Dashboard />} />
+                        <Route exact path="/dashboard" element={<Dashboard />} />
 
                         <Route path="users" element={<UserIndex />} />
                         <Route path="users/create" element={<UserCreate />} />

@@ -24,7 +24,7 @@ export default class LandingPage extends Component {
                                         <li className="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
                                         <li className="scroll-to-section"><a href="#blog">Blog</a></li>
                                         <li className="scroll-to-section"><a href="#contact">Message Us</a></li>
-                                        <li className="scroll-to-section"><div className="main-red-button"><Link to={'/admin'}>Is Admin</Link></div></li>
+                                        <li className="scroll-to-section"><div className="main-red-button"><Link to={'/dashboard'}>Is Admin</Link></div></li>
                                     </ul>
                                     <a className='menu-trigger'>
                                         <span>Menu</span>

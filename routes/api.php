@@ -21,6 +21,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::post('/login', [LoginController::class, 'login']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::resource('users', UserController::class);
 
