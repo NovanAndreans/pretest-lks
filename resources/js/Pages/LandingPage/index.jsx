@@ -8,6 +8,7 @@ import Session from 'react-session-api'
 
 export default function LandingPage() {
     const [allMenu, setAllMenu] = useState([]);
+    const [allCategory, setAllCategory] = useState([]);
     const [tags, setTags] = useState([]);
     const [chosedTags, setChosedTags] = useState([]);
 
@@ -44,6 +45,48 @@ export default function LandingPage() {
             })
 
     }, [])
+
+    useEffect(() => {
+        axios.get(`/api/categorys/all`)
+            .then(function (response) {
+                setAllCategory(response.data)
+            })
+            .catch(function (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'An Error Occured!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+
+    }, [])
+
+    const filterCategory = async (e) => {
+
+        const formData = new FormData()
+
+        formData.append('idCategory', e)
+
+        var response = await axios.post(`http://localhost:8000/api/menus/where`, formData)
+        console.log(response)
+        setAllMenu(response.data)
+    }
+
+    const getAllMenu = async (e) => {
+        axios.get(`/api/menus/all`)
+            .then(function (response) {
+                setAllMenu(response.data)
+            })
+            .catch(function (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'An Error Occured!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+    }
 
     const createNewTag = async (e) => {
         e.preventDefault();
@@ -185,24 +228,47 @@ export default function LandingPage() {
                 <section id="menu" className="menu section-bg">
                     <div className="container" data-aos="fade-up">
 
+                        <div className='row menu-container mb-3'>
+
+                            <div className="col-lg-3 menu-item" onClick={
+                                (event) => {
+                                    getAllMenu()
+                                }
+                            }>
+                                All
+                            </div>
+                            {
+                                Object.entries(allCategory).map(([key, value]) => (
+
+                                    <div key={key} className="col-lg-3 menu-item" onClick={
+                                        (event) => {
+                                            filterCategory(value.idCategory)
+                                        }
+                                    }>
+                                        {value.categoryname}
+                                    </div>
+                                ))
+                            }
+                        </div>
+
                         <div className="section-title">
                             <h2>Menu</h2>
                             <p>Check Our Tasty Menu</p>
                         </div>
 
-                        <div className="row menu-container" data-aos="fade-up" data-aos-delay="200">
+                        <div className="row" data-aos="fade-up" data-aos-delay="200">
 
                             {
                                 Object.entries(allMenu).map(([key, value]) => (
 
-                                    <a key={key} href="#chefs">
-                                        <div className="col-lg-6 menu-item" onClick={
-                                            (event) => {
-                                                setMenuId(value.idMenu)
-                                                setMenuName(value.menuname)
-                                                console.log(menuName)
-                                            }
-                                        }>
+                                    <div className="col-lg-6 menu-item" onClick={
+                                        (event) => {
+                                            setMenuId(value.idMenu)
+                                            setMenuName(value.menuname)
+                                            console.log(menuName)
+                                        }
+                                    }>
+                                        <a key={key} href="#chefs">
                                             <img src="assets/img/menu/lobster-bisque.jpg" className="menu-img" alt="" />
                                             <div className="menu-content">
                                                 <a href="#">{value.menuname}</a><span>{value.price}</span>
@@ -210,8 +276,8 @@ export default function LandingPage() {
                                             <div className="menu-ingredients">
                                                 Lorem, deren, trataro, filede, nerada
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 ))
                             }
 

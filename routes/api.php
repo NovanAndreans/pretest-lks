@@ -34,6 +34,7 @@ Route::post('/tags/where', [TagController::class, 'where']);
 Route::resource('tags', TagController::class);
 
 Route::get('/menus/all', [MenuController::class, 'all']);
+Route::post('/menus/where', [MenuController::class, 'where']);
 Route::resource('menus', MenuController::class);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);

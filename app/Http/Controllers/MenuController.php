@@ -33,9 +33,9 @@ class MenuController extends Controller
         return $query;
     }
 
-    public function where($id)
+    public function where(Request $request)
     {
-        $query = $this->menu->where('idCategory', $id)->get();
+        $query = $this->menu->where('idCategory', $request->idCategory)->get();
 
         return $query;
     }
@@ -47,7 +47,9 @@ class MenuController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $this->menu->join('categorys', 'menus.idCategory', '=', 'categorys.idCategory')->orderBy($request->column, $request->order);
+        $query = $this->menu->join('categorys', 'menus.idCategory', '=', 'categorys.idCategory')
+            ->with()
+            ->orderBy($request->column, $request->order);
         $users = $query->paginate($request->per_page ?? 5);
 
         return MenuResource::collection($users);
