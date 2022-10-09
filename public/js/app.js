@@ -6780,50 +6780,40 @@ function LandingPage() {
       chosedTags = _useState8[0],
       setChosedTags = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState10 = _slicedToArray(_useState9, 2),
-      menuId = _useState10[0],
-      setMenuId = _useState10[1];
+      menutags = _useState10[0],
+      setMenuTags = _useState10[1];
 
   var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState12 = _slicedToArray(_useState11, 2),
-      menuName = _useState12[0],
-      setMenuName = _useState12[1];
+      menuId = _useState12[0],
+      setMenuId = _useState12[1];
 
   var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState14 = _slicedToArray(_useState13, 2),
-      tagId = _useState14[0],
-      setTagId = _useState14[1];
+      menuName = _useState14[0],
+      setMenuName = _useState14[1];
 
   var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState16 = _slicedToArray(_useState15, 2),
-      tagName = _useState16[0],
-      setTagName = _useState16[1];
+      newTag = _useState16[0],
+      setNewTag = _useState16[1];
 
   var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState18 = _slicedToArray(_useState17, 2),
-      tagType = _useState18[0],
-      setTagType = _useState18[1];
+      typeTagActive = _useState18[0],
+      setTypeTagActive = _useState18[1];
 
   var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState20 = _slicedToArray(_useState19, 2),
-      newTag = _useState20[0],
-      setNewTag = _useState20[1];
+      comment = _useState20[0],
+      setComment = _useState20[1];
 
   var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState22 = _slicedToArray(_useState21, 2),
-      typeTagActive = _useState22[0],
-      setTypeTagActive = _useState22[1];
-
-  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState24 = _slicedToArray(_useState23, 2),
-      comment = _useState24[0],
-      setComment = _useState24[1];
-
-  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState26 = _slicedToArray(_useState25, 2),
-      value = _useState26[0],
-      setValue = _useState26[1];
+      value = _useState22[0],
+      setValue = _useState22[1];
 
   var scrollDiv = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createRef)();
 
@@ -6858,7 +6848,7 @@ function LandingPage() {
     });
   }, []);
 
-  var filterCategory = /*#__PURE__*/function () {
+  var getAllMenuTags = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
       var formData, response;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
@@ -6866,16 +6856,15 @@ function LandingPage() {
           switch (_context.prev = _context.next) {
             case 0:
               formData = new FormData();
-              formData.append('idCategory', e);
+              formData.append('idMenu', e);
               _context.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/menus/where", formData);
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/menutags", formData);
 
             case 4:
               response = _context.sent;
-              console.log(response);
-              setAllMenu(response.data);
+              setMenuTags(response.data);
 
-            case 7:
+            case 6:
             case "end":
               return _context.stop();
           }
@@ -6883,16 +6872,46 @@ function LandingPage() {
       }, _callee);
     }));
 
-    return function filterCategory(_x) {
+    return function getAllMenuTags(_x) {
       return _ref.apply(this, arguments);
     };
   }();
 
-  var getAllMenu = /*#__PURE__*/function () {
+  var filterCategory = /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(e) {
+      var formData, response;
       return _regeneratorRuntime().wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
+            case 0:
+              formData = new FormData();
+              formData.append('idCategory', e);
+              _context2.next = 4;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/menus/where", formData);
+
+            case 4:
+              response = _context2.sent;
+              console.log(response);
+              setAllMenu(response.data);
+
+            case 7:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function filterCategory(_x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var getAllMenu = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(e) {
+      return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
             case 0:
               axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/menus/all").then(function (response) {
                 setAllMenu(response.data);
@@ -6907,39 +6926,39 @@ function LandingPage() {
 
             case 1:
             case "end":
-              return _context2.stop();
+              return _context3.stop();
           }
         }
-      }, _callee2);
+      }, _callee3);
     }));
 
-    return function getAllMenu(_x2) {
-      return _ref2.apply(this, arguments);
+    return function getAllMenu(_x3) {
+      return _ref3.apply(this, arguments);
     };
   }();
 
   var createNewTag = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(e) {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(e) {
       var formData;
-      return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      return _regeneratorRuntime().wrap(function _callee4$(_context4) {
         while (1) {
-          switch (_context3.prev = _context3.next) {
+          switch (_context4.prev = _context4.next) {
             case 0:
               e.preventDefault();
               formData = new FormData();
               formData.append('tagname', newTag);
               formData.append('tagtype', typeTagActive);
-              _context3.next = 6;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/tags", formData).then(function (_ref4) {
-                var data = _ref4.data;
+              _context4.next = 6;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/tags", formData).then(function (_ref5) {
+                var data = _ref5.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
                   icon: "success",
                   text: name + " Has Been Created"
                 });
                 setNewTag('');
                 fetch(typeTagActive);
-              })["catch"](function (_ref5) {
-                var response = _ref5.response;
+              })["catch"](function (_ref6) {
+                var response = _ref6.response;
 
                 if (response.status === 422) {
                   setValidationError(response.data.errors);
@@ -6953,31 +6972,31 @@ function LandingPage() {
 
             case 6:
             case "end":
-              return _context3.stop();
+              return _context4.stop();
           }
         }
-      }, _callee3);
+      }, _callee4);
     }));
 
-    return function createNewTag(_x3) {
-      return _ref3.apply(this, arguments);
+    return function createNewTag(_x4) {
+      return _ref4.apply(this, arguments);
     };
   }();
 
   var fetch = /*#__PURE__*/function () {
-    var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(type) {
+    var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(type) {
       var formData, response;
-      return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+      return _regeneratorRuntime().wrap(function _callee5$(_context5) {
         while (1) {
-          switch (_context4.prev = _context4.next) {
+          switch (_context5.prev = _context5.next) {
             case 0:
               formData = new FormData();
               formData.append('type', type);
-              _context4.next = 4;
+              _context5.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/tags/where", formData);
 
             case 4:
-              response = _context4.sent;
+              response = _context5.sent;
 
               if (response.data['message'] == 'success') {
                 console.log(response.data);
@@ -6986,23 +7005,23 @@ function LandingPage() {
 
             case 6:
             case "end":
-              return _context4.stop();
+              return _context5.stop();
           }
         }
-      }, _callee4);
+      }, _callee5);
     }));
 
-    return function fetch(_x4) {
-      return _ref6.apply(this, arguments);
+    return function fetch(_x5) {
+      return _ref7.apply(this, arguments);
     };
   }();
 
   var send = /*#__PURE__*/function () {
-    var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(e) {
+    var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(e) {
       var formData, config;
-      return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+      return _regeneratorRuntime().wrap(function _callee6$(_context6) {
         while (1) {
-          switch (_context5.prev = _context5.next) {
+          switch (_context6.prev = _context6.next) {
             case 0:
               e.preventDefault();
               formData = new FormData();
@@ -7017,15 +7036,23 @@ function LandingPage() {
                   'Accept': 'application/json'
                 }
               };
-              _context5.next = 10;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/comments", formData, config).then(function (_ref8) {
-                var data = _ref8.data;
+              _context6.next = 10;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/comments", formData, config).then(function (_ref9) {
+                var data = _ref9.data;
                 sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
                   icon: "success",
                   text: "Your Comment Has Been Send"
                 });
-              })["catch"](function (_ref9) {
-                var response = _ref9.response;
+                setMenuTags([]);
+                setChosedTags([]);
+                setMenuId('');
+                setMenuName('');
+                setNewTag('');
+                setTypeTagActive('');
+                setComment('');
+                setValue('');
+              })["catch"](function (_ref10) {
+                var response = _ref10.response;
 
                 if (response.status === 422) {
                   setValidationError(response.data.errors);
@@ -7039,14 +7066,14 @@ function LandingPage() {
 
             case 10:
             case "end":
-              return _context5.stop();
+              return _context6.stop();
           }
         }
-      }, _callee5);
+      }, _callee6);
     }));
 
-    return function send(_x5) {
-      return _ref7.apply(this, arguments);
+    return function send(_x6) {
+      return _ref8.apply(this, arguments);
     };
   }();
 
@@ -7194,10 +7221,10 @@ function LandingPage() {
                 getAllMenu();
               },
               children: "All"
-            }), Object.entries(allCategory).map(function (_ref10) {
-              var _ref11 = _slicedToArray(_ref10, 2),
-                  key = _ref11[0],
-                  value = _ref11[1];
+            }), Object.entries(allCategory).map(function (_ref11) {
+              var _ref12 = _slicedToArray(_ref11, 2),
+                  key = _ref12[0],
+                  value = _ref12[1];
 
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: "col-lg-3 menu-item",
@@ -7218,17 +7245,17 @@ function LandingPage() {
             className: "row",
             "data-aos": "fade-up",
             "data-aos-delay": "200",
-            children: Object.entries(allMenu).map(function (_ref12) {
-              var _ref13 = _slicedToArray(_ref12, 2),
-                  key = _ref13[0],
-                  value = _ref13[1];
+            children: Object.entries(allMenu).map(function (_ref13) {
+              var _ref14 = _slicedToArray(_ref13, 2),
+                  key = _ref14[0],
+                  value = _ref14[1];
 
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: "col-lg-6 menu-item",
                 onClick: function onClick(event) {
                   setMenuId(value.idMenu);
                   setMenuName(value.menuname);
-                  console.log(menuName);
+                  getAllMenuTags(value.idMenu);
                 },
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("a", {
                   href: "#chefs",
@@ -7259,8 +7286,22 @@ function LandingPage() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "container",
           "data-aos": "fade-up",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "section-title",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h2", {
+            children: [menuName, " Tags : "]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "row",
+            children: Object.entries(menutags).map(function (_ref15) {
+              var _ref16 = _slicedToArray(_ref15, 2),
+                  key = _ref16[0],
+                  value = _ref16[1];
+
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: "col-lg-3 menu-item",
+                children: ["#", value.tagname]
+              }, key);
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "section-title mt-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
               children: "Rate"
             })
@@ -7361,10 +7402,10 @@ function LandingPage() {
           "data-aos": "fade-up",
           children: [console.log(chosedTags), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: "row",
-            children: Object.entries(tags).map(function (_ref14) {
-              var _ref15 = _slicedToArray(_ref14, 2),
-                  key = _ref15[0],
-                  value = _ref15[1];
+            children: Object.entries(tags).map(function (_ref17) {
+              var _ref18 = _slicedToArray(_ref17, 2),
+                  key = _ref18[0],
+                  value = _ref18[1];
 
               return (
                 /*#__PURE__*/
@@ -7390,10 +7431,10 @@ function LandingPage() {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
                 children: "Choosed Tags"
               })
-            }), Object.entries(chosedTags).map(function (_ref16) {
-              var _ref17 = _slicedToArray(_ref16, 2),
-                  key = _ref17[0],
-                  value = _ref17[1];
+            }), Object.entries(chosedTags).map(function (_ref19) {
+              var _ref20 = _slicedToArray(_ref19, 2),
+                  key = _ref20[0],
+                  value = _ref20[1];
 
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: "col-lg-3 col-md-6 menu-item",

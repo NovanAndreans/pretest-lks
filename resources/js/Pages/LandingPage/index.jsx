@@ -10,13 +10,12 @@ export default function LandingPage() {
     const [allMenu, setAllMenu] = useState([]);
     const [allCategory, setAllCategory] = useState([]);
     const [tags, setTags] = useState([]);
+
     const [chosedTags, setChosedTags] = useState([]);
+    const [menutags, setMenuTags] = useState([]);
 
     const [menuId, setMenuId] = useState('');
     const [menuName, setMenuName] = useState('');
-    const [tagId, setTagId] = useState('');
-    const [tagName, setTagName] = useState('');
-    const [tagType, setTagType] = useState('');
 
     const [newTag, setNewTag] = useState('');
     const [typeTagActive, setTypeTagActive] = useState('');
@@ -61,6 +60,16 @@ export default function LandingPage() {
             })
 
     }, [])
+
+    const getAllMenuTags = async (e) => {
+
+        const formData = new FormData()
+
+        formData.append('idMenu', e)
+
+        var response = await axios.post(`http://localhost:8000/api/menutags`, formData)
+        setMenuTags(response.data)
+    }
 
     const filterCategory = async (e) => {
 
@@ -151,6 +160,16 @@ export default function LandingPage() {
                 icon: "success",
                 text: `Your Comment Has Been Send`
             })
+
+
+            setMenuTags([])
+            setChosedTags([])
+            setMenuId('')
+            setMenuName('')
+            setNewTag('')
+            setTypeTagActive('')
+            setComment('')
+            setValue('')
 
         }).catch(({ response }) => {
             if (response.status === 422) {
@@ -265,7 +284,7 @@ export default function LandingPage() {
                                         (event) => {
                                             setMenuId(value.idMenu)
                                             setMenuName(value.menuname)
-                                            console.log(menuName)
+                                            getAllMenuTags(value.idMenu)
                                         }
                                     }>
                                         <a key={key} href="#chefs">
@@ -291,7 +310,19 @@ export default function LandingPage() {
                 <section id="chefs" className="chefs">
                     <div className="container" data-aos="fade-up">
 
-                        <div className="section-title">
+                        <h2>{menuName} Tags : </h2><br />
+                        <div className='row'>
+                            {
+                                Object.entries(menutags).map(([key, value]) => (
+
+                                    <div key={key} className="col-lg-3 menu-item">
+                                        #{value.tagname}
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+                        <div className="section-title mt-3">
                             <h2>Rate</h2>
                             {/* <p>Our Proffesional Chefs</p> */}
                         </div>

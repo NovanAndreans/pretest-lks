@@ -30,10 +30,14 @@ class MenusTagsController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $this->menusTags->orderBy($request->column, $request->order);
-        $users = $query->paginate($request->per_page ?? 5);
+        $query = $this->menusTags
+            ->join('menus', 'menus.idMenu', '=', 'menus_tags.idMenu')
+            ->join('tags', 'tags.idTag', '=', 'menus_tags.idTag')
+            ->where('menus.idMenu', $request->idMenu)
+            ->distinct()
+            ->get();
 
-        return MenuTagResource::collection($users);
+        return $query;
     }
 
     /**

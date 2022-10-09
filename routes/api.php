@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\MenusTagsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CommentController;
 
@@ -36,6 +37,8 @@ Route::resource('tags', TagController::class);
 Route::get('/menus/all', [MenuController::class, 'all']);
 Route::post('/menus/where', [MenuController::class, 'where']);
 Route::resource('menus', MenuController::class);
+
+Route::post('/menutags', [MenusTagsController::class, 'index']);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
